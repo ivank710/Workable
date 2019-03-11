@@ -9,9 +9,6 @@ class MainPage extends React.Component {
         <div className="splash-container">
           <div className="splash-title">
             <h1>Workable</h1>
-            {/* <style>
-              @import url('https://fonts.googleapis.com/css?family=Bree+Serif');
-            </style> */}
           </div>
         </div>
         <div className="splash-slogan">
