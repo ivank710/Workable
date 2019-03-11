@@ -42,10 +42,11 @@ class LoginForm extends React.Component {
     };
 
     this.props.login(user)
-    .then( () => this.props.closeModal());
+    .then( () => this.props.closeModal(), () => this.renderErrors());
   }
 
   renderErrors() {
+    
     return (
       <ul>
         {Object.keys(this.state.errors).map((error, i) => (
@@ -58,27 +59,38 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    console.log()
+    
     return (
       <div>
+        <div className="modal-header">
+          <h1 id="session">Login</h1>
+        </div>
+        <div className="login-form-container">
         <form onSubmit={this.handleSubmit}>
-          <div>
+          <div className="login-form">
+   
               <input type='text'
               value={this.state.email}
               onChange={this.update('email')}
               placeholder="Email"
+              className="session-input"
               />
-            <br/>
+           
               <input type='password'
                 value={this.state.password}
                 onChange={this.update('password')}
                 placeholder="Password"
+                className="session-input"
               />
-            <br/>
-            <input type="submit" value="Submit" />
+            </div>
+            <div className="submit-modal-container">
+            <input className="submit-modal" type="submit" value="Submit" />
+            </div>
+          <div className="error-rendering">
             {this.renderErrors()}
           </div>
         </form>
+        </div>
       </div>
     );
   }
