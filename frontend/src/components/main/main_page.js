@@ -6,6 +6,7 @@ class MainPage extends React.Component {
     return (
       <div>
         <h1>Workable</h1>
+        
         <footer>
           Copyright
         </footer>
