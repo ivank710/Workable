@@ -1,9 +1,10 @@
 .navbar {
     width: 100%vw;
     height: 60px;
-    background: lightblue;
+    background: orange;
     display: flex;
     align-items: center;
+    color: white;
 }
 
 .navbarsub {
@@ -22,6 +23,7 @@
     align-self: center;
 }
 
+
 .navright {
     display: flex;
     justify-content: space-between;
@@ -30,4 +32,14 @@
     width: 150px;
     
 }
+/* 
+.navlink {
+    height: 25px;
+    width: auto;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 3px;
+} */
 
