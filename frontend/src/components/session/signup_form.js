@@ -37,14 +37,16 @@ class SignupForm extends React.Component {
       password2: this.state.password2
     };
 
-    this.props.signup(user).then(() => this.props.closeModal());
+    this.props.signup(user).then(() => this.renderErrors());
   }
 
+
   renderErrors() {
+
     return (
-      <ul>
+      <ul className="errors-display">
         {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>
+          <li key={`error-${i}`} >
             {this.state.errors[error]}
           </li>
         ))}
@@ -57,31 +59,39 @@ class SignupForm extends React.Component {
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit}>
           <div className="login-form">
-            <br/>
+
+            <div id="session-word">Sign Up</div>
+
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 placeholder="Email"
+                className="session-input"
               />
-            <br/>
+         
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 placeholder="Password"
+                className="session-input"
               />
-            <br/>
+           
               <input type="password"
                 value={this.state.password2}
                 onChange={this.update('password2')}
                 placeholder="Confirm Password"
+                className="session-input"
               />
-            <br/>
-              <input type="submit" value="Submit" />
-              {this.renderErrors()}
-          </div>
+           
+              <input  className="submit-modal"type="submit" value="Submit" />
+              <div className="error-display">
+                {this.renderErrors()}
+              </div> 
+            </div>
         </form>
       </div>
     );
+    // Delete this comment
   }
 }
 

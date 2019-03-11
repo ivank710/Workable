@@ -23,6 +23,10 @@ class LoginForm extends React.Component {
     this.setState({errors: nextProps.errors})
   }
 
+  errorHandling(){
+
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -54,6 +58,7 @@ class LoginForm extends React.Component {
   }
 
   render() {
+    console.log()
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
