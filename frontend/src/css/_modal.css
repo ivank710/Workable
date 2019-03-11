@@ -15,5 +15,43 @@
   transform: translate(-50%, -50%);
   height: 300px;
   width:300px;
-  background: blue
+  background: blue;
+  display: flex;
+  justify-content: center;
+  align-content: column;
+}
+
+
+#session-word{
+  display: flex;
+  padding: 10px 0px;
+  color: white;
+}
+
+.session-input{
+  display: flex;
+  font-size: 14px;
+  margin: 0 0 9px;
+  padding: 5px 9px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.submit-modal{
+  font-size: 16px;
+  font-weight: 700;
+  width: 70%;
+  padding: 12px 0;
+  margin-top: 8px;
+  line-height: 1.3125em;
+  color: white;
+  border: 1px solid ;
+  border-radius: 3px;
+  background-color: orange;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
