@@ -15,7 +15,7 @@
   transform: translate(-50%, -50%);
   height: 400px;
   width:300px;
-  background: blue;
+  background: #4480B7;
 }
 
 .modal-header{
@@ -23,6 +23,7 @@
   justify-content: center;
   align-items: center;
   height: 60px;
+  margin-bottom: 40px;
 }
 
 #session{
@@ -76,7 +77,7 @@
   font-weight: 700;
   width: 200px;
   padding: 12px 0;
-  margin-top: 8px;
+  margin-top: 25px;
   line-height: 1.3125em;
   color: white;
   border: 1px solid ;
