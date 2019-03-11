@@ -7,8 +7,8 @@ export default function(state = {}, action) {
         isAuthenticated: false,
         user: undefined
       };
-    // case RECEIVE_CURRENT_USER: 
-    //   return {isAuthenticated: true, user: action.currentUser};
+    case RECEIVE_CURRENT_USER: 
+      return {isAuthenticated: true, user: action.currentUser};
     default:
       return state;
   }
