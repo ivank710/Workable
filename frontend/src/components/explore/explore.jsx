@@ -1,13 +1,14 @@
 import React from 'react';
+import Layout from '../layout/layout';
 
 class Explore extends React.Component {
 
 
     render() {
         return(
-            <div>
-                This is the explore page
-            </div>
+            <Layout >
+                This is explore page
+            </Layout>
         )
     }
 }
