@@ -31,7 +31,6 @@ router.post('/register', (req, res) => {
       } else {
         //otherwise creates a new User
         const newUser = new User({
-          handle: req.body.handle,
           email: req.body.email,
           password: req.body.password
         });
@@ -43,7 +42,7 @@ router.post('/register', (req, res) => {
             newUser.password = hash;
             newUser.save()
               .then(user => {
-                const payload = { id: user.id, handle: user.handle };
+                const payload = { id: user.id, email: user.email };
 
                 jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
                   res.json({
@@ -83,7 +82,6 @@ router.post('/login', (req, res) => {
           if (isMatch) {
             const payload = {
               id: user.id,    //from mongo
-              handle: user.handle,
               email: user.email
             };
 
@@ -113,7 +111,6 @@ router.post('/login', (req, res) => {
 router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
   res.json({
     id: req.user.id,
-    handle: req.user.handle,
     email: req.user.email
   });
 });
