@@ -9,6 +9,8 @@ export default function(state = {isAuthenticated: false, user: null}, action) {
       };
     case RECEIVE_CURRENT_USER: 
       return {isAuthenticated: true, user: action.currentUser};
+    case RECEIVE_USER_SIGN_IN:
+      return { isAuthenticated: true };
     default:
       return state;
   }

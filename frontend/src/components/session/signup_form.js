@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -37,16 +37,16 @@ class SignupForm extends React.Component {
       password2: this.state.password2
     };
 
-    this.props.signup(user).then(() => this.renderErrors());
+    this.props.signup(user).then(() => this.props.closeModal(), () => this.renderErrors());
   }
 
 
   renderErrors() {
 
     return (
-      <ul className="errors-display">
+      <ul >
         {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`} >
+          <li className="error-rendering" key={`error-${i}`} >
             {this.state.errors[error]}
           </li>
         ))}
@@ -56,11 +56,13 @@ class SignupForm extends React.Component {
 
   render() {
     return (
+      <div>
+        <div className="modal-header">
+          <h1 id="session">Sign Up</h1>
+        </div>
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit}>
           <div className="login-form">
-
-            <div id="session-word">Sign Up</div>
 
               <input type="text"
                 value={this.state.email}
@@ -82,16 +84,21 @@ class SignupForm extends React.Component {
                 placeholder="Confirm Password"
                 className="session-input"
               />
-           
-              <input  className="submit-modal"type="submit" value="Submit" />
-              <div className="error-display">
-                {this.renderErrors()}
-              </div> 
+              </div>
+            <div className="submit-modal-container">
+              <input className="submit-modal" type="submit" value="Submit" />
+            </div>
+            <div className="error-rendering">
+              {this.renderErrors()}
             </div>
         </form>
       </div>
+      <div>
+       
+        </div>
+      </div>
     );
-    // Delete this comment
+  
   }
 }
 
