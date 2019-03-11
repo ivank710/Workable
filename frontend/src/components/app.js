@@ -13,12 +13,12 @@ const App = () => (
   <div>
     <Modal />
     {/* <NavBarContainer /> */}
-    <Switch>
-      <ProtectedRoute path='/explore' component={Explore}/>
+    {/* <Switch> */}
+      <ProtectedRoute exact path='/explore' component={Explore}/>
       <AuthRoute exact path="/" component={MainPageContainer} />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-    </Switch>
+      {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
+    {/* </Switch> */}
   </div>
 );
 
