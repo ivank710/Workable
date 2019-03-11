@@ -1,0 +1,45 @@
+.navbar {
+    width: 100%vw;
+    height: 60px;
+    background: orange;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.navbarsub {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px 0px 15px;
+}
+
+.maintitle {
+    font-size: 28px;
+    letter-spacing: .3em;
+    display: flex;
+    align-self: center;
+}
+
+
+.navright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 150px;
+    
+}
+/* 
+.navlink {
+    height: 25px;
+    width: auto;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 3px;
+} */
+
