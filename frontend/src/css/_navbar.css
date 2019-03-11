@@ -16,5 +16,18 @@
 }
 
 .maintitle {
-    font-size: 30px;
+    font-size: 28px;
+    letter-spacing: .3em;
+    display: flex;
+    align-self: center;
 }
+
+.navright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 150px;
+    
+}
+
