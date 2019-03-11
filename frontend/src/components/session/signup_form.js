@@ -91,6 +91,7 @@ class SignupForm extends React.Component {
         </form>
       </div>
     );
+    // Delete this comment
   }
 }
 
