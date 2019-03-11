@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+
+
 .splash-container{
   position: absolute;
   top: 0%;
   bottom: 24%;
   left: 0%;
   right: 0%;
-  background-image: url('../images/dot-jobs.jpg');
+  background-image: url('../images/dot-jobs.jpg'); 
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
@@ -16,10 +19,10 @@
 .splash-title{
   display: flex;
   justify-content: center;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Bree serif', serif;
   font-size: 120px;
   color: orange;
-  font-weight: bolder;
+  font-weight: normal;
 }
 
 .splash-slogan{
@@ -27,6 +30,8 @@
   justify-content: center;
   padding-top: 577px;
   font-size: 35px;
+  font-weight: lighter;
+  font-family: serif;
   color: orange;
 }
 
@@ -38,6 +43,7 @@
 .login{
   font-size: 40px;
   font-weight: lighter;
+  font-family: serif;
   border: 3px solid orange;
   border-radius: 2px;
   background-color: orange;

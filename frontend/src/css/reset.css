@@ -14,7 +14,7 @@ span, article, footer, time, small {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif */
 }
 
 ul {
