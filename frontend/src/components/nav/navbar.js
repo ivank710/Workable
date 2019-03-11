@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import './navbar.css';
+import '../../css/_navbar.css';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -37,9 +37,12 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>This is navbar</h1>
+      <div className='navbar'>
+        <div className='navbarsub'>
+          <Link to='/explore'><div>Home</div></Link>
+          <div className='maintitle'>Workable</div>
           <button onClick={this.props.logout} >Logout</button>
+        </div>
       </div>
     );
   }
