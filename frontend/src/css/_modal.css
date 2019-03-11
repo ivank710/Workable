@@ -13,12 +13,36 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 300px;
+  height: 400px;
   width:300px;
   background: blue;
+}
+
+.modal-header{
   display: flex;
   justify-content: center;
-  align-content: column;
+  align-items: center;
+  height: 60px;
+}
+
+#session{
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+}
+
+.login-form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-form{
+  width: 200px;
 }
 
 
@@ -26,6 +50,7 @@
   display: flex;
   padding: 10px 0px;
   color: white;
+  justify-content: center;
 }
 
 .session-input{
@@ -38,12 +63,18 @@
   border: 1px solid #999;
   border-radius: 3px;
   box-sizing: border-box;
+  
+}
+
+.submit-modal-container{
+  width: 200px;
+  margin: 0 auto;
 }
 
 .submit-modal{
   font-size: 16px;
   font-weight: 700;
-  width: 70%;
+  width: 200px;
   padding: 12px 0;
   margin-top: 8px;
   line-height: 1.3125em;
@@ -54,4 +85,16 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  align-self: center;
+}
+
+.error-display{
+  
+}
+
+.error-rendering{
+  padding: 5px 0px;
+  color: white;
+  width: 200px;
+  margin: 0 auto;
 }
