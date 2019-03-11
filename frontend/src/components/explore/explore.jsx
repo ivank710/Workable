@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../layout/layout';
+import '../../css/_explore.css';
 
 class Explore extends React.Component {
 
@@ -7,7 +8,17 @@ class Explore extends React.Component {
     render() {
         return(
             <Layout >
-                This is explore page
+                <div className='explore'>
+                    <div className='header'>See what's new around you</div>
+                    <div className='explorecontent'>
+                            <div className='content'></div>
+                            <div className='content'></div>
+                            <div className='content'></div>
+                            <div className='content'></div>
+                            <div className='content'></div>
+                            {/* these will become list items */}
+                    </div>
+                </div>
             </Layout>
         )
     }

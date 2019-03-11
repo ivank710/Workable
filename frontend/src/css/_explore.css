@@ -1,0 +1,39 @@
+.explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header {
+    height: 75px;
+    width: 85%;
+    display: flex;
+    align-items: flex-end;
+    background: white;
+    font-size: 20px;
+
+}
+
+.explorecontent {
+    height: 1500px;
+    width: 85%;
+    background: lightgray;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+
+
+.content {
+    height: 200px;
+    width: 90%;
+    background: white;
+    margin: 10px 0px 5px 0px;
+    border: 1px solid orange;
+}
