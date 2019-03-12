@@ -79,36 +79,36 @@ app.post('/file-upload', upload.single('myFile'), (req, res, next) => {
     return next(error);
   }
 
-  let arr = ['software', 'developer', 'javascript'];
-  let keywords = [];
-  //Fix this to take in any uploaded file
-  // let dataBuffer = fs.readFileSync(`uploads/sample_resume.pdf`);
+   //Reads any file that's uploaded and saved
   let dataBuffer = fs.readFileSync(`uploads/${file.originalname}`);
   pdf(dataBuffer).then(function (data) {
+    let keywords = [];
+    let resWords = data.text.toLowerCase().split(' ');
     // use data
-    console.log(data.text.includes('Charles'));
-    // res.send(data.text);
-
-    //   for (let i = 0; i < arr.length; i++)
-    //   {
-
-    //   if (data.text.includes(arr[i])) {
-    //     keywords.append(arr[i]);
-
-    //     //Then send result with response to React
-    //   }
-    // }
+    fs.readFile('KeywordsText.text', 'utf-8', (err, keyText) => { 
+      let result = [];
+      if (err) throw err; 
+      
+      //Array of all words in KeywordsText
+      keywords = keyText.toLowerCase().split('\n');
+      for (let i = 0; i < resWords.length; i++)
+      {
+      if (keywords.includes(resWords[i])) {
+        if (!result.includes(resWords[i]))
+        result.push(resWords[i]);
+      }
+    }
+    res.send(result);
+    });
+     
   })
     .catch(function (error) {
       // handle exceptions
     });
 
-  //Sends response back to frontend (USE THIS!!)
-  //Filter text from PDF, find keywords, then send response back to display
-  res.send(file);
+  //Sends response back to frontend
+  // res.send(file);
 });
-
-
 
 
 
