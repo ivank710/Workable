@@ -18,7 +18,6 @@ const App = () => (
       <ProtectedRoute exact path='/user' component={UserPage}/>
       <ProtectedRoute exact path='/explore' component={ExploreContainer}/>
       <AuthRoute exact path="/" component={MainPageContainer} />
-     
     {/* </Switch> */}
   </div>
 );

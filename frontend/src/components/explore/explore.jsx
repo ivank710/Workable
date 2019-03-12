@@ -14,6 +14,9 @@ class Explore extends React.Component {
     }
 
     render() {
+			if (this.props.jobs.constructor !== Array){
+				return null;
+			}
         return(
             <Layout >
                 <div className='explore'>
@@ -24,6 +27,8 @@ class Explore extends React.Component {
                         </div> 
                     </div>
                     <div className='explorecontent'>
+                        {/* <UploadContainer /> */}
+
                             <div className='content'></div>
                             <div className='content'></div>
                             <div className='content'></div>
