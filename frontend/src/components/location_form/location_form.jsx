@@ -26,8 +26,8 @@ class LocationForm extends React.Component {
         return(
             <div>
                <form onSubmit={this.handleSubmit}>
-                   <input type="text" onChange={this.update('location')} placeholder='city name ie: san francisco'/>
-                   <input type='submit'  value='Search'/>
+                   <input className='searchinput' type="text" onChange={this.update('location')} placeholder='city name ie: san francisco'/>
+                   <input className='searchbutton' type='submit'  value='Search'/>
                </form>
             </div>
         )

@@ -21,7 +21,7 @@ class Explore extends React.Component {
             <Layout >
                 <div className='explore'>
                     <div className='header'> 
-                        <div>See what's new around you</div>
+                        <div className='searchtext'>See what's new around:</div>
                         <div>
                             <LocationForm getJobs={this.props.getJobs}/>
                         </div> 
