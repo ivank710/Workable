@@ -7,7 +7,7 @@ const msp = state => ({
 });
 
 const mdp = dispatch => ({
-    getJobs: () => dispatch(getJobs())
+    getJobs: (location) => dispatch(getJobs(location))
 });
 
 export default connect(msp, mdp)(Explore);

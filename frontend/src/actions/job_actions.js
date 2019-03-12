@@ -7,7 +7,9 @@ const receiveJobs = jobs => ({
     jobs: jobs.data
 });
 
-export const getJobs = () => dispatch => (
-    APIUtil.getJobs()
+export const getJobs = (location) => dispatch => (
+    APIUtil.getJobs(location)
     .then(jobs => dispatch(receiveJobs(jobs)))
 );
+
+

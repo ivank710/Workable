@@ -3,6 +3,7 @@ import Layout from "../layout/layout";
 import "../../css/_explore.css";
 import Axios from "axios";
 import JobIndexItem from "./job_index_item";
+import LocationForm from '../location_form/location_form';
 
 class Explore extends React.Component {
   constructor(props) {
@@ -19,9 +20,16 @@ class Explore extends React.Component {
 		}
 		console.log(this.props.jobs[0])
     return (
-      <Layout>
+			<Layout> 
+				
+				
         <div className="explore">
-          <div className="header">See what's new around you</div>
+					<div className="header">
+					<div className='searchtext'>See what's new around:</div>
+					<div>
+						<LocationForm getJobs={this.props.getJobs} />
+					</div>
+					</div>
           <div className="explore-content">
           {this.props.jobs.map(job => (
               <JobIndexItem job={job} key={job.id} />
