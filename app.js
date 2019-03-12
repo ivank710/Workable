@@ -7,6 +7,12 @@ const tweets = require("./routes/api/tweets");
 const User = require('./models/User');
 const bodyParser = require("body-parser");  //to parse json we sent to our frontend
 const passport = require('passport');
+const jobs = require('./routes/api/jobs');
+
+
+const http = require('http');
+
+
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -37,6 +43,7 @@ app.get("/", (req, res) => {
 
 //tells express to use these routes
 app.use("/api/users", users);
+app.use("/api/jobs", jobs);
 // app.use("/api/tweets", tweets);
 
 //sets up middleware for body parser

@@ -1,9 +1,13 @@
 import React from 'react';
 import Layout from '../layout/layout';
 import '../../css/_explore.css';
+import Axios from 'axios';
 
 class Explore extends React.Component {
 
+
+    componentDidMount() {
+    }
 
     render() {
         return(
