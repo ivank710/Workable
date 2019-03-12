@@ -16,15 +16,11 @@ class LoginForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.currentUser === true) {
-      this.props.history.push('/tweets');
+    if (nextProps.signedIn === true) {
+      this.props.history.push('/explore');
     }
 
     this.setState({errors: nextProps.errors})
-  }
-
-  errorHandling(){
-
   }
 
   update(field) {
@@ -41,8 +37,8 @@ class LoginForm extends React.Component {
       password: this.state.password
     };
 
-    this.props.login(user)
-    .then( () => this.props.closeModal());
+    this.props.login(user).then(() => this.props.closeModal())
+   
   }
 
   renderErrors() {
@@ -61,24 +57,34 @@ class LoginForm extends React.Component {
     
     return (
       <div>
+        <div className="modal-header">
+          <h1 id="session">Login</h1>
+        </div>
+        <div className="login-form-container">
         <form onSubmit={this.handleSubmit}>
-          <div>
+          <div className="login-form">
               <input type='text'
               value={this.state.email}
               onChange={this.update('email')}
               placeholder="Email"
+              className="session-input"
               />
-            <br/>
+            
               <input type='password'
                 value={this.state.password}
                 onChange={this.update('password')}
                 placeholder="Password"
+                className="session-input"
               />
-            <br/>
-            <input type="submit" value="Submit" />
+            </div>
+            <div className="submit-modal-container">
+            <input className="submit-modal" type="submit" value="Submit" />
+            </div>
+            <div className="error-rendering">
             {this.renderErrors()}
-          </div>
+            </div>
         </form>
+        </div>
       </div>
     );
   }
