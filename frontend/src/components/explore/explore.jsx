@@ -4,12 +4,19 @@ import '../../css/_explore.css';
 import Axios from 'axios';
 
 class Explore extends React.Component {
-
+    constructor(props){
+			super(props)
+			
+    }
 
     componentDidMount() {
+			this.props.getJobs()
     }
 
     render() {
+			if (this.props.jobs.constructor !== Array){
+				return null;
+			}
         return(
             <Layout >
                 <div className='explore'>

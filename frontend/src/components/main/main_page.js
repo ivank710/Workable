@@ -12,7 +12,7 @@ class MainPage extends React.Component {
           </div>
         </div>
         <div className="splash-slogan">
-          <h3>Find your job today!</h3>
+          <h3>Find your future today!</h3>
         </div>
 
         <div className="splash-buttons">
@@ -32,7 +32,7 @@ class MainPage extends React.Component {
             Sign Up
           </button>
         </div>
-
+         
         <div className="footer">{/* <footer>Copyright</footer> */}</div>
       </>
     );  
