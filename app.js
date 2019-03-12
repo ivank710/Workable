@@ -8,11 +8,10 @@ const User = require('./models/User');
 const bodyParser = require("body-parser");  //to parse json we sent to our frontend
 const passport = require('passport');
 const jobs = require('./routes/api/jobs');
-
-
+const path = require("path");
+const pdf = require("pdf-parse");
+const fs = require("fs");
 const http = require('http');
-
-
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -49,6 +48,70 @@ app.use("/api/jobs", jobs);
 //sets up middleware for body parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+
+
+
+
+
+//HANDLE UPLOADED FILE
+var multer = require('multer');
+var cors = require('cors');
+app.use(cors());
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+    // cb(null, file.originalname + '-' + Date.now() );
+  }
+});
+
+var upload = multer({ storage: storage });
+app.post('/file-upload', upload.single('myFile'), (req, res, next) => {
+  const file = req.file;
+  console.log(file);
+  if (!file) {
+    const error = new Error('Please upload a file');
+    error.httpStatusCode = 400;
+    return next(error);
+  }
+
+  let arr = ['software', 'developer', 'javascript'];
+  let keywords = [];
+  //Fix this to take in any uploaded file
+  // let dataBuffer = fs.readFileSync(`uploads/sample_resume.pdf`);
+  let dataBuffer = fs.readFileSync(`uploads/${file.originalname}`);
+  pdf(dataBuffer).then(function (data) {
+    // use data
+    console.log(data.text.includes('Charles'));
+    // res.send(data.text);
+
+    //   for (let i = 0; i < arr.length; i++)
+    //   {
+
+    //   if (data.text.includes(arr[i])) {
+    //     keywords.append(arr[i]);
+
+    //     //Then send result with response to React
+    //   }
+    // }
+  })
+    .catch(function (error) {
+      // handle exceptions
+    });
+
+  //Sends response back to frontend (USE THIS!!)
+  //Filter text from PDF, find keywords, then send response back to display
+  res.send(file);
+});
+
+
+
+
+
 
 //allows us to deploy to heroku later
 //now we'll run on localhost:5000

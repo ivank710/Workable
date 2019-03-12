@@ -1,11 +1,14 @@
 import React from 'react';
 import '../../css/_main_page.css';
+import UploadContainer from "../../components/explore/upload_container";
 
 class MainPage extends React.Component {
 
   render() {
     return (
       <>
+        <UploadContainer />
+
         <div className="splash-container">
           <div className="splash-title">
             <h1>Workable</h1>
