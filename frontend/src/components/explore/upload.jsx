@@ -22,7 +22,7 @@ class Upload extends React.Component {
     this.setState({
       selectedFile: event.target.files[0],
       loaded: 0,
-    })
+    });
   }
 
   onClickHandler() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../layout/layout';
 import '../../css/_user_page.css';
+import UploadContainer from "../../components/explore/upload_container";
 
 class UserPage extends React.Component {
 
@@ -21,6 +22,7 @@ class UserPage extends React.Component {
            
           <div className="list-container">
             <div className="my-list">My List</div>
+              <UploadContainer />
             <div className="list-box">
             <div className="job">vdfv fdz dfs</div>
             <div className="job"></div>
