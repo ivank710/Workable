@@ -6,6 +6,18 @@ class JobIndexItem extends React.Component {
     super(props);
   }
 
+  checkImage(){
+    if (this.props.job.company_logo !== null) {
+      return(
+        <>
+        <img src={this.props.job.company_logo} alt="" />
+        </>
+      )
+    } else {
+      return ""
+    }
+  }
+
   render() {
     return (
       <div className="content-container">
@@ -15,7 +27,10 @@ class JobIndexItem extends React.Component {
             Company: {this.props.job.company}
           </div>
           <div className="content-type-left">
-            <a href={this.props.job.company_url}>Apply Now</a>
+            <a id="apply-now" href={this.props.job.company_url}>Apply Now</a>
+          </div>
+          <div className="company-image">
+            {this.checkImage()}
           </div>
         </div>
         <div className="right-content">

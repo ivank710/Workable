@@ -5,8 +5,6 @@ class DescriptionItem extends React.Component{
     super(props);
   }
 
-
-
   render(){
     return(
       <div className="description-container">

@@ -18,6 +18,10 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
+<<<<<<< HEAD
+=======
+    "escape-html": "^1.0.3",
+>>>>>>> 6d75a7459140564a6f9f7ea0db24eb52309cd430
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "fs": "0.0.1-security",

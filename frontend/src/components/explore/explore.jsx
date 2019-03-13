@@ -30,7 +30,7 @@ class Explore extends React.Component {
 						<LocationForm getJobs={this.props.getJobs} />
 					</div>
 					</div>
-          <div className="explore-content">
+          <div className="explorecontent">
           {this.props.jobs.map(job => (
               <JobIndexItem job={job} key={job.id} />
           ))}
