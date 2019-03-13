@@ -18,6 +18,8 @@ Workable is a personalized job searching app designed to provide users relevant 
 
 ### Search Functionality 
 
+![Screen Shot 2019-03-13 at 10 22 28 AM](https://user-images.githubusercontent.com/42259148/54300368-f37e2280-4579-11e9-82c4-51d371f89df5.png)
+
 One key functionality for this app was for users to select a specific location while looking for jobs. The goal was to use an external api to pull data based on the users input. In order to implement this, we created a thunk action creator that uses an API call to our backend route which will make the external API call based on the given parameters. 
 
 API call to the backend.
