@@ -1,20 +1,17 @@
 import React from "react";
 import DescriptionItem from "./description_item";
-let HtmlEscape = require("html-escape");
+
 class JobIndexItem extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  parseDesc(description) {
-    let value = HtmlEscape(description);
-    return value;
-  }
-
   checkImage(){
     if (this.props.job.company_logo !== null) {
       return(
+        <>
         <img src={this.props.job.company_logo} alt="" />
+        </>
       )
     } else {
       return ""

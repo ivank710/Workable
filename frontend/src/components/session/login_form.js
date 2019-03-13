@@ -12,15 +12,16 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.signedIn === true) {
+    if (nextProps.currentUser === true) {
       this.props.history.push('/explore');
     }
 
-    this.setState({errors: nextProps.errors})
+    this.setState({errors: nextProps.errors});
   }
 
   update(field) {
@@ -37,9 +38,34 @@ class LoginForm extends React.Component {
       password: this.state.password
     };
 
-    this.props.login(user)
-   
+    this.props.login(user);
   }
+
+  handleDemoSubmit(e) {
+    e.preventDefault();
+
+    let demoEmail = 'mern@mail.com'.split("");
+    let demoPassword = 'password'.split("");
+
+    this.setState({
+      email: this.state.email,
+      password: this.state.password,
+    }, () => this.demoLogin(demoEmail, demoPassword));
+  }
+
+
+  demoLogin(email, password, errors) {
+    if (email.length > 0) {
+      this.setState({ email: this.state.email += email.shift() },
+        () => window.setTimeout(() => this.demoLogin(email, password), 65));
+    } else if (password.length > 0) {
+      this.setState({ password: this.state.password += password.shift() },
+        () => window.setTimeout(() => this.demoLogin(email, password), 75));
+    } else if (email.length === 0 && password.length === 0) {
+      this.props.login(this.state);
+    }
+  }
+
 
   renderErrors() {
     return (
@@ -54,36 +80,45 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    
     return (
       <div>
         <div className="modal-header">
           <h1 id="session">Login</h1>
         </div>
         <div className="login-form-container">
-        <form onSubmit={this.handleSubmit}>
-          <div className="login-form">
-              <input type='text'
-              value={this.state.email}
-              onChange={this.update('email')}
-              placeholder="Email"
-              className="session-input"
+          <form onSubmit={this.handleSubmit}>
+            <div className="login-form">
+              <input
+                type="text"
+                value={this.state.email}
+                onChange={this.update("email")}
+                placeholder="Email"
+                className="session-input"
               />
-            
-              <input type='password'
+
+              <input
+                type="password"
                 value={this.state.password}
-                onChange={this.update('password')}
+                onChange={this.update("password")}
                 placeholder="Password"
                 className="session-input"
               />
             </div>
             <div className="submit-modal-container">
-            <input className="submit-modal" type="submit" value="Submit" />
+              <input
+                className="submit-modal"
+                type="submit"
+                value="Submit"
+              />
+              <input
+                className="submit-modal"
+                type="submit"
+                onClick={this.handleDemoSubmit}
+                value="Demo"
+              />
             </div>
-            <div className="error-rendering">
-            {this.renderErrors()}
-            </div>
-        </form>
+            <div className="error-rendering">{this.renderErrors()}</div>
+          </form>
         </div>
       </div>
     );
