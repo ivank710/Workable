@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser'
+import ReactHtmlParser from 'react-html-parser';
 class DescriptionItem extends React.Component{
   constructor(props){
-    super(props)
+    super(props);
   }
 
 

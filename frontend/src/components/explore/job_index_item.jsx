@@ -1,14 +1,9 @@
 import React from "react";
 import DescriptionItem from "./description_item";
-let HtmlEscape = require("html-escape");
+
 class JobIndexItem extends React.Component {
   constructor(props) {
     super(props);
-  }
-
-  parseDesc(description) {
-    let value = HtmlEscape(description);
-    return value;
   }
 
   render() {
