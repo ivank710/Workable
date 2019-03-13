@@ -108,11 +108,8 @@ app.post('/file-upload', upload.single('myFile'), (req, res, next) => {
      
   })
     .catch(function (error) {
-      // handle exceptions
-    });
-
-  //Sends response back to frontend
-  // res.send(file);
+    //handle exceptions
+   });
 });
 
 ```
