@@ -58,3 +58,62 @@ router.get('/:location', (req, res) => {
 
 ### Resume Keyword Parser
 
+Handles the resume and parses it for keywords that match our set of keywords
+```
+
+var multer = require('multer');
+var cors = require('cors');
+app.use(cors());
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  }
+});
+
+var upload = multer({ storage: storage });
+app.post('/file-upload', upload.single('myFile'), (req, res, next) => {
+  const file = req.file;
+
+  if (!file) {
+    const error = new Error('Please upload a file');
+    error.httpStatusCode = 400;
+    return next(error);
+  }
+
+   //Reads any file that's uploaded and saved
+  let dataBuffer = fs.readFileSync(`uploads/${file.originalname}`);
+  pdf(dataBuffer).then(function (data) {
+    let keywords = [];
+    let resWords = data.text.toLowerCase().split(' ');
+    // use data
+    fs.readFile('KeywordsText.text', 'utf-8', (err, keyText) => { 
+      let result = [];
+      if (err) throw err; 
+      
+      //Array of all words in KeywordsText
+      keywords = keyText.toLowerCase().split('\n');
+      for (let i = 0; i < resWords.length; i++)
+      {
+      if (keywords.includes(resWords[i])) {
+        if (!result.includes(resWords[i]))
+        result.push(resWords[i]);
+      }
+    }
+    res.send(result);
+    });
+     
+  })
+    .catch(function (error) {
+      // handle exceptions
+    });
+
+  //Sends response back to frontend
+  // res.send(file);
+});
+
+```
+
