@@ -65,14 +65,13 @@ var storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);
-    // cb(null, file.originalname + '-' + Date.now() );
   }
 });
 
 var upload = multer({ storage: storage });
 app.post('/file-upload', upload.single('myFile'), (req, res, next) => {
   const file = req.file;
-  console.log(file);
+
   if (!file) {
     const error = new Error('Please upload a file');
     error.httpStatusCode = 400;
