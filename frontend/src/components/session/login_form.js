@@ -16,8 +16,8 @@ class LoginForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.signedIn === true) {
-      this.props.history.push('/explore');
+    if (nextProps.currentUser === true) {
+      this.props.history.push('/tweets');
     }
 
     this.setState({errors: nextProps.errors})
@@ -38,7 +38,7 @@ class LoginForm extends React.Component {
     };
 
     this.props.login(user)
-   
+    // .then;
   }
 
   renderErrors() {
@@ -54,37 +54,26 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    
     return (
       <div>
-        <div className="modal-header">
-          <h1 id="session">Login</h1>
-        </div>
-        <div className="login-form-container">
         <form onSubmit={this.handleSubmit}>
-          <div className="login-form">
+          <div>
               <input type='text'
               value={this.state.email}
               onChange={this.update('email')}
               placeholder="Email"
-              className="session-input"
               />
-            
+            <br/>
               <input type='password'
                 value={this.state.password}
                 onChange={this.update('password')}
                 placeholder="Password"
-                className="session-input"
               />
-            </div>
-            <div className="submit-modal-container">
-            <input className="submit-modal" type="submit" value="Submit" />
-            </div>
-            <div className="error-rendering">
+            <br/>
+            <input type="submit" value="Submit" />
             {this.renderErrors()}
-            </div>
+          </div>
         </form>
-        </div>
       </div>
     );
   }
