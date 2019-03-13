@@ -4,7 +4,7 @@
 
 Workable is a personalized job searching app designed to provide users relevant listings based on their resume. Users have the option of filtering job results based on city once they login. However, the main feature of this app is allowing users to upload their resume and providing relevant search results by making API calls based on keywords found in their resume.
 
-![alt text]
+![Screen Shot 2019-03-13 at 10 15 43 AM](https://user-images.githubusercontent.com/42259148/54299895-0e03cc00-4579-11e9-8808-4f70db01c285.png)
 
 ## Technologies Used
 * Javascript
