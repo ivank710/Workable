@@ -1,0 +1,52 @@
+.sidebar{
+  height: 250px;
+}
+
+.avatar{
+
+  background-image: url('../images/avatar.jpeg'); 
+  background-repeat: no-repeat;
+  background-position: 18% 110%;
+  height: 98%;
+  width: 30%;
+
+}
+
+.my-list{
+  font-size: 70px;
+  padding-left: 25px;
+  color: orange;
+}
+
+.list-container{
+
+  position: absolute;
+  top: 330px;
+  bottom: 15px;
+  right: -290px;
+  left: 330px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.list-box{
+  height: 1000px;
+  width: 70%;
+  background: lightgray;
+  border: 1px solid #B1E6FB;
+  margin: 20px;
+  
+  padding-left: 100px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.job{
+    height: 200px;
+    width: 90%;
+    background: white;
+    margin: 10px 0px 15px 0px;
+    border: 1px solid #B1E6FB; 
+
+}
