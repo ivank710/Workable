@@ -18,15 +18,7 @@ const UserJobSchema = new Schema ({
         type: String,
         required: false
     },
-    created_at: {
-        type: String,
-        required: false
-    },
     description: {
-        type: String,
-        required: false
-    },
-    how_to_apply: {
         type: String,
         required: false
     },
