@@ -9,8 +9,10 @@ import {logout} from './actions/session_actions';
 // import {getJobs, getPrice, getJobs2} from './util/api_util';
 import {getJobs} from './actions/job_actions';
 
-window.getJobs = getJobs;
+import {fetchUserJobs} from './util/user_jobs_util';
 
+window.getJobs = getJobs;
+window.fetchUserJobs = fetchUserJobs;
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

@@ -5,9 +5,9 @@ export const fetchUserJobs = () => (
 );
 
 export const saveJob = (job) => (
-    axios.post('/api/userJoba', job)
+    axios.post('/api/userJobs', job)
 );
 
-export const deleteUserJob = id (
+export const deleteUserJob = id => (
     axios.delete(`/api/userJobs/${id}`)
 );

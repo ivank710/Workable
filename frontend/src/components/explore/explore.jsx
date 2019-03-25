@@ -12,7 +12,7 @@ class Explore extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getJobs();
+    this.props.getAllJobs();
   }
 
   render() {
@@ -31,7 +31,7 @@ class Explore extends React.Component {
 					</div>
           <div className="explorecontent">
             {this.props.jobs.map(job => (
-              <JobIndexItem job={job} key={job.id} />
+              <JobIndexItem job={job} key={job.id} saveJob={this.props.saveJob}/>
             ))}
           </div>
 				</div>
