@@ -9,7 +9,7 @@ import {logout} from './actions/session_actions';
 // import {getJobs, getPrice, getJobs2} from './util/api_util';
 import {getJobs} from './actions/job_actions';
 
-import {fetchUserJobs} from './util/user_jobs_util';
+import {fetchUserJobs} from './actions/user_job_actions'
 
 window.getJobs = getJobs;
 window.fetchUserJobs = fetchUserJobs;

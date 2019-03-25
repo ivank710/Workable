@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../layout/layout";
 import "../../css/_explore.css";
-import Axios from "axios";
 import JobIndexItem from "./job_index_item";
 import LocationForm from '../location_form/location_form';
 

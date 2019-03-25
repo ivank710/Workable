@@ -19,15 +19,16 @@ router.post('/', passport.authenticate('jwt', {session: false}), (req,res) => {
         location: req.body.location,
         title: req.body.location,
         type: req.body.title,
-        url: req.body.url
+        url: req.body.url,
+        user: req.user.id
     });
 
     newJob.save().then( job => res.json(job)).catch(error => res.status(422).json({uniqueness: 'This job is saved already!'}))
 });
 
 router.delete('/:userjobid', passport.authenticate('jwt', {session: false}), (req, res) => {
-    const jobid = req.params.userjobid;
-    UserJob.findOneAndRemove({jobid}).then(() => res.json({success: true}));
+    const _id = req.params.userjobid;
+    UserJob.findOneAndRemove({_id}).then(() => res.json({success: true}));
 });
 
 module.exports = router;
