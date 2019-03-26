@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../layout/layout";
 import "../../css/_explore.css";
-import Axios from "axios";
 import JobIndexItem from "./job_index_item";
 import LocationForm from '../location_form/location_form';
 
@@ -12,7 +11,7 @@ class Explore extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getJobs();
+    this.props.getAllJobs();
   }
 
   render() {
@@ -31,7 +30,7 @@ class Explore extends React.Component {
 					</div>
           <div className="explorecontent">
             {this.props.jobs.map(job => (
-              <JobIndexItem job={job} key={job.id} />
+              <JobIndexItem job={job} key={job.id} saveJob={this.props.saveJob}/>
             ))}
           </div>
 				</div>
