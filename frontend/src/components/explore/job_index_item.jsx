@@ -36,7 +36,7 @@ class JobIndexItem extends React.Component {
             <a id="apply-now" href={this.props.job.company_url}>Apply Now</a>
           </div>
           <div className="content-type-left">
-            <button onClick={this.handleSave}>Save Job</button>
+            <button onClick={this.handleSave}>Save To My List</button>
           </div>
           <div className="company-image">
             {this.checkImage()}
