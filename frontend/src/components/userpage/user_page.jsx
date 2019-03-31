@@ -24,13 +24,12 @@ class UserPage extends React.Component {
           <UploadContainer />
            
           <div className="list-container">
-            <div className="my-list">My List</div>
-            <div className="list-box">
-            <div className="job">vdfv fdz dfs</div>
-            <div className="job"></div>
-            <div className="job"></div>
-            <div className="job"></div>
+            <div className="job-item">
+              {this.props.userJobs.map(jobItem => (
+                <UserJobItem job={jobItem} />
+              ))}
             </div>
+            
           </div>
          </Layout>
         )

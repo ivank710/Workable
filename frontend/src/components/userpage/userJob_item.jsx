@@ -6,6 +6,18 @@ class UserJobItem extends React.Component {
     this.handleDelete = this.handleDelete.bind(this);
   }
 
+  checkImage() {
+    if (this.props.job.company_logo !== null) {
+      return (
+        <>
+          <img src={this.props.job.company_logo} alt="" />
+        </>
+      )
+    } else {
+      return ""
+    }
+  }
+
   handleDelete(e) {
     e.preventDefault();
     this.props.deleteJob(this.props.job.id);
@@ -19,7 +31,7 @@ class UserJobItem extends React.Component {
         </div>
 
         <div className="company-logo">
-          {this.props.job.company_logo}
+          {this.checkImage()}
         </div>
 
         <div className="job-title">
