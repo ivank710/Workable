@@ -9,6 +9,10 @@ const UserSchema = new Schema({
   password: {
     type: String, 
     require: true
+  },
+  keywords: {
+    type: Array,
+    require: false
   }
 });
 
