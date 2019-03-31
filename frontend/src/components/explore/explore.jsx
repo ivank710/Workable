@@ -16,7 +16,12 @@ class Explore extends React.Component {
 
   render() {
     if (this.props.jobs[0] === undefined) {
-      return null;
+      return (
+        <div className='exploreloading'>
+          <div className='loadingdiv'><i className="fas fa-spinner fa-spin"></i> Loading Page</div>
+        </div>
+      )
+      
 	}
     return (
 		  <Layout> 		
