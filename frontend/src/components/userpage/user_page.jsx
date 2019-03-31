@@ -14,18 +14,18 @@ class UserPage extends React.Component {
     }
 
     render() {
-
+        let userJobs = this.props.userJobs;
 
 
         return(
          <Layout>
            <div className="sidebar">
              <div className="avatar"></div>
+              <UploadContainer />
            </div>
            
           <div className="list-container">
-            <div className="my-list">My List</div>
-              <UploadContainer />
+            <div className="my-list">My Saved Jobs</div>
             <div className="list-box">
             <div className="job">vdfv fdz dfs</div>
             <div className="job"></div>

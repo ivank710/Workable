@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import FormData from 'form-data';
-// import './upload.css';
+import '../../css/_upload.css';
 
 class Upload extends React.Component {
   constructor(props) {
@@ -48,9 +48,10 @@ class Upload extends React.Component {
           <div className="row">
             <div className="col-md-6">
 
-              <form method="post" encType="multipart/form-data" action="/file-upload">
-                <input type="file" name="myFile" />
-                <input type="submit" value="Upload Now!" />
+              <form className='uploadform' method="post" encType="multipart/form-data" action="/file-upload">
+                <label className='fileupload' htmlFor="myFile">Upload Resume</label>
+                <input type="file" id='myFile' name="myFile" />
+                <input className='uploadsubmit' type="submit" value="Submit" />
               </form >
 
             </div>
