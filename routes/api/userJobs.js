@@ -28,7 +28,7 @@ router.post('/', passport.authenticate('jwt', {session: false}), (req,res) => {
 
 router.delete('/:userjobid', passport.authenticate('jwt', {session: false}), (req, res) => {
     const _id = req.params.userjobid;
-    UserJob.findOneAndRemove({_id}).then(() => res.json({success: true}));
+    UserJob.findOneAndRemove({_id}).then(() => res.json({id: _id}));
 });
 
 module.exports = router;

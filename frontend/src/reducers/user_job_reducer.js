@@ -11,7 +11,7 @@ const UserJobsReducer = ( state = {}, action) => {
             action.jobs.data.forEach(job => saveJobs[job._id] = job);
             return Object.assign({}, saveJobs);
         case REMOVE_SAVED_JOB:
-            delete newState[action.id];
+            delete newState[action.id.data.id];
             return newState;
         default:
             return state;
