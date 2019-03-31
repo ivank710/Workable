@@ -13,3 +13,6 @@ export const getJobs = (location) => dispatch => (
 );
 
 
+export const getAllJobs = () => dispatch => (
+    APIUtil.getAllJobs().then(jobs => dispatch(receiveJobs(jobs)))
+);

@@ -8,6 +8,7 @@ const User = require('./models/User');
 const bodyParser = require("body-parser");  //to parse json we sent to our frontend
 const passport = require('passport');
 const jobs = require('./routes/api/jobs');
+const userJobs = require('./routes/api/userJobs');
 const path = require("path");
 const pdf = require("pdf-parse");
 const fs = require("fs");
@@ -28,6 +29,7 @@ app.use(bodyParser.json()); //allows our app to respond to json
 app.use(passport.initialize());   //adds middleware for Passport
 require("./config/passport")(passport);
 
+<<<<<<< HEAD
 //app will listen for get requests
 app.get("/", (req, res) => {
   //debugger
@@ -39,11 +41,15 @@ app.get("/", (req, res) => {
   // user.save();  //now this user is in our MongoDB
   res.send("Hello World");
 });
+=======
+
+>>>>>>> 3811cabc894455722f29806a47bbff66a22bd001
 
 //tells express to use these routes
 app.use("/api/users", users);
 app.use("/api/jobs", jobs);
-// app.use("/api/tweets", tweets);
+app.use("/api/userJobs", userJobs);
+
 
 //sets up middleware for body parser
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -4,6 +4,7 @@ import DescriptionItem from "./description_item";
 class JobIndexItem extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSave = this.handleSave.bind(this);
   }
 
   checkImage(){
@@ -18,6 +19,11 @@ class JobIndexItem extends React.Component {
     }
   }
 
+  handleSave(e) {
+    e.preventDefault();
+    this.props.saveJob(this.props.job);
+  }
+
   render() {
     return (
       <div className="content-container">
@@ -28,6 +34,9 @@ class JobIndexItem extends React.Component {
           </div>
           <div className="content-type-left">
             <a id="apply-now" href={this.props.job.company_url}>Apply Now</a>
+          </div>
+          <div className="content-type-left">
+            <button onClick={this.handleSave}>Save To My List</button>
           </div>
           <div className="company-image">
             {this.checkImage()}
