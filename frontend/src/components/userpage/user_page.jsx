@@ -10,10 +10,13 @@ class UserPage extends React.Component {
     }
 
     componentDidMount() {
-      //get user's jobs
+      this.props.fetchUserJobs();
     }
 
     render() {
+
+
+
         return(
          <Layout>
            <div className="sidebar">
