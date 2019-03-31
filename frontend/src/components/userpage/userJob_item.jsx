@@ -10,7 +10,7 @@ class UserJobItem extends React.Component {
     if (this.props.job.company_logo !== null) {
       return (
         <>
-          <img src={this.props.job.company_logo} alt="" />
+          <img className="logo" src={this.props.job.company_logo} height="50" width="50" />
         </>
       )
     } else {
@@ -20,30 +20,33 @@ class UserJobItem extends React.Component {
 
   handleDelete(e) {
     e.preventDefault();
-    this.props.deleteJob(this.props.job.id);
+    this.props.deleteJob(this.props.job._id);
   }
   
   render() {
     return (
       <div className="job-container">
-        <div className="company">
-          Company: {this.props.job.company}
-        </div>
-
         <div className="company-logo">
           {this.checkImage()}
         </div>
 
+        <div className="company">
+          <span className="company-name">Company:  </span>
+          {this.props.job.company}
+        </div>
+
         <div className="job-title">
+          <span className="role">Role:  </span>
           {this.props.job.type}
         </div>
 
         <div className="job-location">
+          <span className="location">Location: </span>
           {this.props.job.location}
         </div>
 
         <div className="delete-job">
-          <button onClick={this.handleDelete}>Delete</button>
+          <button className="delete-button" onClick={this.handleDelete}>Delete</button>
         </div>
       </div>
     )

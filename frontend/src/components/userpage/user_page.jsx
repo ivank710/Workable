@@ -22,11 +22,12 @@ class UserPage extends React.Component {
              <div className="avatar"></div>
            </div>
           <UploadContainer />
+          <br/>
            
           <div className="list-container">
             <div className="job-item">
               {this.props.userJobs.map(jobItem => (
-                <UserJobItem job={jobItem} />
+                <UserJobItem job={jobItem} deleteJob={this.props.deleteJob}/>
               ))}
             </div>
             
