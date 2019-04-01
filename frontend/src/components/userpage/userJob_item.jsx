@@ -28,19 +28,22 @@ class UserJobItem extends React.Component {
       <div className="job-container">
         <div className="company-logo">{this.checkImage()}</div>
 
-        <div className="company">
-          <span className="company-name">Company: </span>
-          {this.props.job.company}
-        </div>
+        <div className='jobmaininfo'>
+          <div className="company">
+            <span className="company-name">Company: </span>
+            {this.props.job.company}
+          </div>
 
-        <div className="job-title">
-          <span className="role">Role: </span>
-          {this.props.job.type}
-        </div>
+          <div className="job-title">
+            <span className="role">Role: </span>
+            {this.props.job.type}
+          </div>
 
-        <div className="job-location">
-          <span className="location">Location: </span>
-          {this.props.job.location}
+          <div className="job-location">
+            <span className="location">Location: </span>
+            {this.props.job.location}
+          </div>
+
         </div>
 
         <div className="job-url">
