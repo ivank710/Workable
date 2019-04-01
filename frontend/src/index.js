@@ -9,10 +9,11 @@ import {logout} from './actions/session_actions';
 // import {getJobs, getPrice, getJobs2} from './util/api_util';
 import {getJobs} from './actions/job_actions';
 
-import {fetchUserJobs} from './actions/user_job_actions'
+import {fetchUserJobs, deleteJob} from './actions/user_job_actions'
 
-window.getJobs = getJobs;
-window.fetchUserJobs = fetchUserJobs;
+// window.getJobs = getJobs;
+// window.fetchUserJobs = fetchUserJobs;
+window.deleteJob = deleteJob;
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

@@ -139,8 +139,14 @@
   border: 3px solid orange;
 }
 
-.company-image img{
-  
-
+.exploreloading {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25%;
 }
 
+.loadingdiv {
+  font-size: 50px;
+  color: orange;  
+}

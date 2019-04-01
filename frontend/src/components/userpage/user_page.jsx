@@ -15,23 +15,46 @@ class UserPage extends React.Component {
     }
 
     render() {
+        let userJobs = this.props.userJobs;
+
+
         return(
-          
-          <Layout>
-           <div className="sidebar">
-             <div className="avatar"></div>
+         <Layout>
+           <div className='usermain'>
+              <div className="sidebar">
+                <div className="avatar"></div>
+                  <UploadContainer />
+                  <div className='yourkeywords'>Your Keywords:</div>
+                  <div className='keywords'>
+                    <div>keywords</div>
+                    <div>keywords</div>
+                    <div>keywords</div>
+                    <div>keywords</div>
+                    <div>keywords</div>
+                  </div>
+              </div>
+
+              <div className='mainbar'>
+                <div className='mainbartitle'>
+                    My Saved Jobs 
+                </div>
+                <div className='jobitems'>
+                  <div className="job-item">
+                    {this.props.userJobs.map(jobItem => (
+                      <UserJobItem job={jobItem} deleteJob={this.props.deleteJob} />
+                    ))}
+                  </div>
+                </div>
+              </div>
            </div>
-          <UploadContainer />
-          <br/>
-           
+{/*            
           <div className="list-container">
-            <div className="job-item">
-              {this.props.userJobs.map(jobItem => (
-                <UserJobItem job={jobItem} deleteJob={this.props.deleteJob}/>
-              ))}
+            <div className="my-list">My Saved Jobs</div>
+            <div className="list-box">
+            <div className="job">vdfv fdz dfs</div>
+          
             </div>
-            
-          </div>
+          </div> */}
          </Layout>
         )
     }

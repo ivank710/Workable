@@ -1,26 +1,92 @@
-/* .sidebar{
-  height: 230px;
+.usermain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+}
 
-} */
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  margin: 5px;
+  margin-right: 3%;
+  margin-left: 5%
+
+}
 
 .avatar{
-  background-image: url('../images/avatar.jpeg'); 
+  background-image: url('../images/download.png'); 
   background-repeat: no-repeat;
-  background-position: 18% 120%;
-  height: 98%;
-  width: 30%;
+  background-size: cover;
+  height: 250px;
+  width: 250px;
+  margin-top: 5%;
+  border-radius: 50%;
+}
+
+.yourkeywords {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: orange;
+  font-size: 30px;
+  margin: 10px;
+
+}
+
+.keywords {
+  color: orange;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.mainbar {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5%;
 }
 
 
-.list-container{
-
-  
+.mainbartitle {
+  width: 90%;
+  height: 75px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: orange;
+  border-bottom: 2px solid black;
 }
 
-.job-item{
+.jobitems {
+  width: 90%;
+  margin-top: 10px;
+  background: #427EBA;
+  height: 100%;
+}
+
+.my-list{
+  font-size: 70px;
+  padding-left: 25px;
+  color: orange;
+}
+
+.job-item {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+
 }
 
 .logo{
@@ -78,7 +144,6 @@
   border: none;
   color: white;
   padding: 6px 50px;
-  /* border-radius: 2px; */
 }
 
 .job-url a:hover {
