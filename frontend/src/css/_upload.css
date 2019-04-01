@@ -7,7 +7,7 @@
     color: white;
     background: orange;
     border: 1px solid black;
-    width: 115px;
+    width: 130px;
     height: 20px;
     padding: 5px;
     margin: 5px;
@@ -23,4 +23,6 @@
     width: 200px;
     height: 100px;
     margin: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
