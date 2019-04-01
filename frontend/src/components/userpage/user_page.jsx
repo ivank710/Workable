@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../layout/layout';
 import '../../css/_user_page.css';
 import UploadContainer from "../../components/explore/upload_container";
+import UserJobItem from '../userpage/userJob_item';
 
 class UserPage extends React.Component {
 
@@ -14,24 +15,22 @@ class UserPage extends React.Component {
     }
 
     render() {
-
-
-
         return(
-         <Layout>
+          
+          <Layout>
            <div className="sidebar">
              <div className="avatar"></div>
            </div>
+          <UploadContainer />
+          <br/>
            
           <div className="list-container">
-            <div className="my-list">My List</div>
-              <UploadContainer />
-            <div className="list-box">
-            <div className="job">vdfv fdz dfs</div>
-            <div className="job"></div>
-            <div className="job"></div>
-            <div className="job"></div>
+            <div className="job-item">
+              {this.props.userJobs.map(jobItem => (
+                <UserJobItem job={jobItem} deleteJob={this.props.deleteJob}/>
+              ))}
             </div>
+            
           </div>
          </Layout>
         )

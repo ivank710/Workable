@@ -29,7 +29,6 @@ app.use(bodyParser.json()); //allows our app to respond to json
 app.use(passport.initialize());   //adds middleware for Passport
 require("./config/passport")(passport);
 
-<<<<<<< HEAD
 //app will listen for get requests
 app.get("/", (req, res) => {
   //debugger
@@ -41,9 +40,6 @@ app.get("/", (req, res) => {
   // user.save();  //now this user is in our MongoDB
   res.send("Hello World");
 });
-=======
-
->>>>>>> 3811cabc894455722f29806a47bbff66a22bd001
 
 //tells express to use these routes
 app.use("/api/users", users);
