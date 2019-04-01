@@ -13,17 +13,13 @@
 
 
 .list-container{
-  /* position: absolute;
-  top: 330px;
-  bottom: 15px;
-  right: -290px;
-  left: 330px; */
+
   
 }
 
 .job-item{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -35,10 +31,28 @@
 .job-container {
   background-color: white;
   width: 250px;
-  border: 20px solid #407EB4;
+  border: 7px solid #407EB4;
   border-radius: 2.5px;
-  padding: 10px;
+  padding: 5px;
   margin: 10px;
+}
+
+.company-logo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2%;
+}
+
+.company {
+  padding-bottom: 2%;
+}
+
+.job-title {
+  padding-bottom: 2%;
+}
+
+.job-location {
+  padding-bottom: 3%;
 }
 
 .company-name{
@@ -53,11 +67,41 @@
   font-weight: bold;
 }
 
-.delete-button {
+.job-url {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+
+.apply-button {
   background-color: #FFA500;
   border: none;
   color: white;
-  padding: 5px 15px;
+  padding: 6px 50px;
+  /* border-radius: 2px; */
 }
+
+.job-url a:hover {
+  cursor: pointer;
+  text-shadow: 4px 0px 5px white;
+  outline: 2px solid #407EB4;
+
+}
+
+.delete-button {
+  background-color: #407EB4;
+  border: none;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+.delete-job button:hover {
+  cursor: pointer;
+  text-shadow: 4px 0px 5px white;
+  outline: 1px solid white;
+}
+
+
 
 

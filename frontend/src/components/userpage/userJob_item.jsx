@@ -26,17 +26,15 @@ class UserJobItem extends React.Component {
   render() {
     return (
       <div className="job-container">
-        <div className="company-logo">
-          {this.checkImage()}
-        </div>
+        <div className="company-logo">{this.checkImage()}</div>
 
         <div className="company">
-          <span className="company-name">Company:  </span>
+          <span className="company-name">Company: </span>
           {this.props.job.company}
         </div>
 
         <div className="job-title">
-          <span className="role">Role:  </span>
+          <span className="role">Role: </span>
           {this.props.job.type}
         </div>
 
@@ -45,11 +43,18 @@ class UserJobItem extends React.Component {
           {this.props.job.location}
         </div>
 
+        <div className="job-url">
+          <a className="apply-button" href={this.props.job.company_url}>Apply Now</a>
+      
+        </div>
+
         <div className="delete-job">
-          <button className="delete-button" onClick={this.handleDelete}>Delete</button>
+          <button className="delete-button" onClick={this.handleDelete}>
+            Delete
+          </button>
         </div>
       </div>
-    )
+    );
   }
 }
 
