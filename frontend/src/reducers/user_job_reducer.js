@@ -5,7 +5,7 @@ const UserJobsReducer = ( state = {}, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {
         case RECEIVE_SAVED_JOB:
-            return Object.assign({}, {[action.job.data._id]: action.job.data})
+            return Object.assign({}, {[action.job.data._id]: action.job.data});
         case RECEIVE_SAVED_JOBS:
             let saveJobs = {};
             action.jobs.data.forEach(job => saveJobs[job._id] = job);

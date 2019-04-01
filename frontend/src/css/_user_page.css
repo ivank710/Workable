@@ -53,8 +53,8 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 5%;
-
 }
+
 
 .mainbartitle {
   width: 90%;
@@ -73,43 +73,100 @@
   width: 90%;
   margin-top: 10px;
   background: #427EBA;
-  height: 500px;
+  height: 100%;
 }
 
-/* .my-list{
+.my-list{
   font-size: 70px;
   padding-left: 25px;
   color: orange;
 }
 
-.list-container{
+.job-item {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 
-  position: absolute;
-  top: 330px;
-  bottom: 15px;
-  right: -290px;
-  left: 330px;
+}
+
+.logo{
+  height: 50px;
+  width: 155px;
+}
+
+.job-container {
+  background-color: white;
+  width: 250px;
+  border: 7px solid #407EB4;
+  border-radius: 2.5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.company-logo {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  padding-bottom: 2%;
 }
 
-.list-box{
-  height: 1000px;
-  width: 70%;
-  background: lightgray;
-  border: 1px solid #B1E6FB;
-  margin: 20px;
-  
-  padding-left: 100px;
-  padding-top: 50px;
-  padding-bottom: 20px;
+.company {
+  padding-bottom: 2%;
 }
 
-.job{
-    height: 200px;
-    width: 90%;
-    background: white;
-    margin: 10px 0px 15px 0px;
-    border: 1px solid #B1E6FB; 
-} */
+.job-title {
+  padding-bottom: 2%;
+}
+
+.job-location {
+  padding-bottom: 3%;
+}
+
+.company-name{
+  font-weight: bold;
+}
+
+.role {
+  font-weight: bold;
+}
+
+.location {
+  font-weight: bold;
+}
+
+.job-url {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+
+.apply-button {
+  background-color: #FFA500;
+  border: none;
+  color: white;
+  padding: 6px 50px;
+}
+
+.job-url a:hover {
+  cursor: pointer;
+  text-shadow: 4px 0px 5px white;
+  outline: 2px solid #407EB4;
+
+}
+
+.delete-button {
+  background-color: #407EB4;
+  border: none;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+.delete-job button:hover {
+  cursor: pointer;
+  text-shadow: 4px 0px 5px white;
+  outline: 1px solid white;
+}
+
+
+
+

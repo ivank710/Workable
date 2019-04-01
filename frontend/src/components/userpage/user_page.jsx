@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../layout/layout';
 import '../../css/_user_page.css';
 import UploadContainer from "../../components/explore/upload_container";
+import UserJobItem from '../userpage/userJob_item';
 
 class UserPage extends React.Component {
 
@@ -38,7 +39,11 @@ class UserPage extends React.Component {
                     My Saved Jobs 
                 </div>
                 <div className='jobitems'>
-                      items
+                  <div className="job-item">
+                    {this.props.userJobs.map(jobItem => (
+                      <UserJobItem job={jobItem} deleteJob={this.props.deleteJob} />
+                    ))}
+                  </div>
                 </div>
               </div>
            </div>
