@@ -5,9 +5,11 @@ const mongoose = require('mongoose');
 const users = require("./routes/api/users");
 const tweets = require("./routes/api/tweets");
 const User = require('./models/User');
+const Keyword = require('./models/Keyword');
 const bodyParser = require("body-parser");  //to parse json we sent to our frontend
 const passport = require('passport');
 const jobs = require('./routes/api/jobs');
+const keywords = require("./routes/api/keywords");
 const userJobs = require('./routes/api/userJobs');
 const path = require("path");
 const pdf = require("pdf-parse");
@@ -32,19 +34,55 @@ require("./config/passport")(passport);
 //app will listen for get requests
 app.get("/", (req, res) => {
   //debugger
-  // const user = new User({
-  //   handle: 'jim',
-  //   email: 'jim@gmail.com',
-  //   password: 'jimpassword'
-  // });
+  const keywords = new Keyword({
+    keywords: ["a", "b"],
+    user: "5c84644f6b06d1515900728a"
+  });
+
+  keywords.save();
   // user.save();  //now this user is in our MongoDB
   res.send("Hello World");
 });
+
+// app.post("/", (req, res) => {
+//   //debugger
+//   const keywords = new Keyword({
+//     keywords: ["a", "b"],
+//     user: "5c84644f6b06d1515900728a"
+//   });
+
+//   keywords.save();
+//   // user.save();  //now this user is in our MongoDB
+//   res.send("Hello World");
+// });
+
+app.post(
+  "/",
+  passport.authenticate("jwt", {
+    session: false
+  }),
+  (req, res) => {
+    const keyword = new Keyword({
+      keywords: ["hello"],
+      user: "5c84644f6b06d1515900728a"
+    });
+
+    keyword
+      .save()
+      .then(key => res.json(key))
+      .catch(error =>
+        res.status(422).json({
+          uniqueness: "Keyword is saved already"
+        })
+      );
+  }
+);
 
 //tells express to use these routes
 app.use("/api/users", users);
 app.use("/api/jobs", jobs);
 app.use("/api/userJobs", userJobs);
+app.use("/api/keywords", keywords);
 
 
 //sets up middleware for body parser

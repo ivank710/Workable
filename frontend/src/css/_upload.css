@@ -6,13 +6,18 @@
     cursor: pointer;
     color: white;
     background: orange;
-    border: 1px solid black;
+    border: 1.5px solid #427EB9;
     width: 130px;
     height: 20px;
     padding: 5px;
     margin: 5px;
     text-align: center;
     border-radius: 3px;
+}
+
+.fileupload input:hover {
+  cursor: pointer;
+  text-shadow: 4px 0px 5px white;
 }
 
 .uploadform {
