@@ -10,7 +10,7 @@ class LocationForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.getJobs(this.parseInput(this.state.location));
+        this.props.getJobs(this.parseInput(this.state.location), 'empty');
     }
 
     update(field) {
