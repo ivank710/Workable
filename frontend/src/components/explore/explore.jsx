@@ -31,7 +31,7 @@ class Explore extends React.Component {
 					</div>
           <div className="explorecontent">
             {this.props.jobs.map(job => (
-              <JobIndexItem job={job} key={job.id} />
+              <JobIndexItem job={job} key={job.id} openModalDescription={this.props.openModalDescription} />
             ))}
           </div>
 				</div>
