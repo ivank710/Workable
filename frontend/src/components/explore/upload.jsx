@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter, Link } from "react-router-dom";
 import axios from "axios";
 import FormData from "form-data";
+import '../../css/_upload.css';
 
 class Upload extends React.Component {
   constructor(props) {

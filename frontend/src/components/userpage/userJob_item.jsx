@@ -1,5 +1,5 @@
 import React from 'react';
-// import '../../css/_user_page.css';
+import '../../css/_user_page.css';
 
 class UserJobItem extends React.Component {
   constructor(props) {
