@@ -9,7 +9,7 @@ const http = require('http');
 
 const Keyword = require('../../models/Keyword');
 
-//? Look up keywords
+//Look up keywords
 router.get('/', passport.authenticate('jwt', {
   session: false
 }), (req, res) => {
@@ -22,6 +22,19 @@ router.get('/', passport.authenticate('jwt', {
     }));
 });
 
+//Save keywords
+router.post('/', passport.authenticate('jwt', {
+  session: false
+}), (req, res) => {
+  const keyword = new Keyword({
+    keywords: req.body.keywords,
+    user: req.user.id
+  });
+
+  keyword.save().then(key => res.json(key)).catch(error => res.status(422).json({
+    uniqueness: 'Keyword is saved already'
+  }));
+});
 
 // Handle Uploaded File
 var multer = require('multer');

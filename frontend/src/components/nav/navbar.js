@@ -39,7 +39,7 @@ class NavBar extends React.Component {
     return (
       <div className='navbar'>
         <div className='navbarsub'>
-          <Link to='/explore'><div>Home</div></Link>
+          <Link to='/explore'><div className="home">Home</div></Link>
           <div className='maintitle'>Workable</div>
           <div className='navright'>
             <Link to='/user'><div className='navlink'>My Profile</div></Link>
