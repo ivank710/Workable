@@ -27,14 +27,19 @@
 .searchbutton {
     background: orange;
     color: white;
-    border: 1px solid black;
-    border-radius: 3px;
+    /* border-radius: 1px; */
     width:100px;
     text-align: center;
     height: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 
 }
+
+.searchbutton:hover {
+  cursor: pointer;
+  outline: 2px solid #407EB4;
+}
+
 
 .searchinput {
     margin: auto;
@@ -98,6 +103,24 @@
   font-weight: bold;
 }
 
+.content-type-left a:hover {
+  cursor: pointer;
+  outline: 2px solid #407EB4;
+
+}
+
+.save-button {
+  color: white;
+  background-color: orange;
+  padding: 6px;
+}
+
+.content-type-left button:hover {
+  cursor: pointer;
+  outline: 2px solid #407EB4;
+
+}
+
 
 .right-content-top{
   display: flex;
@@ -135,7 +158,7 @@
 #apply-now{
   color: white;
   background-color: orange;
-  padding: 2px;
+  padding: 3px;
   border: 3px solid orange;
 }
 

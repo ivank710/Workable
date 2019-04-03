@@ -27,6 +27,7 @@ class JobIndexItem extends React.Component {
   render() {
     return (
       <div className="content-container">
+
         <div className="left-content">
           <div className="content-type-left">Title: {this.props.job.title}</div>
           <div className="content-type-left">
@@ -36,12 +37,13 @@ class JobIndexItem extends React.Component {
             <a id="apply-now" href={this.props.job.company_url}>Apply Now</a>
           </div>
           <div className="content-type-left">
-            <button onClick={this.handleSave}>Save To My List</button>
+            <button className="save-button" onClick={this.handleSave}>Save To My List</button>
           </div>
           <div className="company-image">
             {this.checkImage()}
           </div>
         </div>
+
         <div className="right-content">
           <div className="right-content-top">
             <div className="content-type-right">
@@ -55,6 +57,7 @@ class JobIndexItem extends React.Component {
             <DescriptionItem description={this.props.job.description} />
           </div>
         </div>
+
       </div>
     );
   }
