@@ -14,8 +14,9 @@ class LocationForm extends React.Component {
         if (keywords.length === 0) {
             keywords = 'empty';
         } else {
-            keywords = keywords.slice(-1).join('+');
-            console.log(keywords)
+            // Take first few keywords to search
+            keywords = keywords.slice(-3).join('+');
+            console.log(keywords);
         }
         this.props.getJobs(this.parseInput(this.state.location), keywords);
     }

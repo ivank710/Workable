@@ -24,14 +24,19 @@ class Explore extends React.Component {
       )
       
   }
-  if (this.props.keywords === undefined) return null
-
-    let keywords = this.props.keywords.keywords.map(el => {
+  let keywords;
+  if (this.props.keywords === undefined) {
+    keywords = '';
+  } else {
+     keywords = this.props.keywords.keywords.map(el => {
       return (
         <span className='word'>&bull; {el}</span>
       )
     });
-    console.log(keywords.keywords)
+    
+  }
+
+    // console.log(keywords.keywords)
 
     return (
 		  <Layout> 		
