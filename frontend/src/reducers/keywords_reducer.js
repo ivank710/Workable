@@ -5,7 +5,7 @@ const KeywordsReducer = ( state = {}, action) => {
   // let newState = Object.assign({}, state);
   switch (action.type) {
       case RECEIVE_SAVED_KEYWORDS:
-          return Object.assign({}, {keywords: action.keywords.data})
+          return Object.assign({}, action.keywords.data)
       default:
           return state;
   }    
