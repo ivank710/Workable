@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Explore from './explore';
+import {openModalDescription} from '../../actions/modal_actions'
 import {getJobs, getAllJobs} from '../../actions/job_actions';
 import {saveJob} from '../../actions/user_job_actions';
 import {fetchKeywords} from '../../actions/keyword_actions';
@@ -10,6 +11,7 @@ const msp = state => ({
 });
 
 const mdp = dispatch => ({
+    openModalDescription: (modal, description) => dispatch(openModalDescription(modal, description)),
     getJobs: (location, keywords) => dispatch(getJobs(location,keywords)),
     getAllJobs: () => dispatch(getAllJobs()),
     saveJob: (job) => dispatch(saveJob(job)),

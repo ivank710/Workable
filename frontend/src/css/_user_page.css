@@ -42,7 +42,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-width: 40px;
+}
 
+.singleKeyword {
+  min-width: 50px;
 }
 
 .mainbar {
@@ -184,7 +188,3 @@
   text-shadow: 4px 0px 5px white;
   outline: 1px solid white;
 }
-
-
-
-
