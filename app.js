@@ -9,7 +9,11 @@ const Keyword = require('./models/Keyword');
 const bodyParser = require("body-parser");  //to parse json we sent to our frontend
 const passport = require('passport');
 const jobs = require('./routes/api/jobs');
+<<<<<<< HEAD
 const keywords = require("./routes/api/keywords");
+=======
+const keywords = require('./routes/api/keywords');
+>>>>>>> 30159434dcf10e518794638038409cb818e399ad
 const userJobs = require('./routes/api/userJobs');
 const path = require("path");
 const pdf = require("pdf-parse");
@@ -33,6 +37,7 @@ require("./config/passport")(passport);
 
 //app will listen for get requests
 app.get("/", (req, res) => {
+<<<<<<< HEAD
   //debugger
   const keywords = new Keyword({
     keywords: ["a", "b"],
@@ -41,6 +46,8 @@ app.get("/", (req, res) => {
 
   keywords.save();
   // user.save();  //now this user is in our MongoDB
+=======
+>>>>>>> 30159434dcf10e518794638038409cb818e399ad
   res.send("Hello World");
 });
 
@@ -89,73 +96,9 @@ app.use("/api/keywords", keywords);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
-
-
-
-
-//HANDLE UPLOADED FILE
-var multer = require('multer');
-var cors = require('cors');
-app.use(cors());
-
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads');
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname);
-  }
-});
-
-var upload = multer({ storage: storage });
-app.post('/file-upload', upload.single('myFile'), (req, res, next) => {
-  const file = req.file;
-
-  if (!file) {
-    const error = new Error('Please upload a file');
-    error.httpStatusCode = 400;
-    return next(error);
-  }
-
-   //Reads any file that's uploaded and saved
-  let dataBuffer = fs.readFileSync(`uploads/${file.originalname}`);
-  pdf(dataBuffer).then(function (data) {
-    let keywords = [];
-    let resWords = data.text.toLowerCase().split(' ');
-    // use data
-    fs.readFile('KeywordsText.text', 'utf-8', (err, keyText) => { 
-      let result = [];
-      if (err) throw err; 
-      
-      //Array of all words in KeywordsText
-      keywords = keyText.toLowerCase().split('\n');
-      for (let i = 0; i < resWords.length; i++)
-      {
-      if (keywords.includes(resWords[i])) {
-        if (!result.includes(resWords[i]))
-        result.push(resWords[i]);
-      }
-    }
-    res.send(result);
-    });
-     
-  })
-    .catch(function (error) {
-      // handle exceptions
-    });
-
-  //Sends response back to frontend
-  // res.send(file);
-});
-
-
-
-
 //allows us to deploy to heroku later
 //now we'll run on localhost:5000
 const port = process.env.PORT || 5000;
 
 //tells Express to start a socket and listen for connections on the path
 app.listen(port, () => console.log(`Server is running on port ${port}`));
-
