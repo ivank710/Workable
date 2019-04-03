@@ -31,7 +31,16 @@
     align-items: center;
     height: 100%;
     width: 150px;
-    
+}
+
+.navlink:hover {
+  cursor: pointer;
+  text-shadow: 4px 2px 7px white;
+}
+
+.home:hover {
+  cursor: pointer;
+  text-shadow: 4px 0px 5px white;
 }
 /* 
 .navlink {

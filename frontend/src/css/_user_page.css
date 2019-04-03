@@ -1,15 +1,80 @@
+.usermain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+}
+
 .sidebar{
-  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  margin: 5px;
+  margin-right: 3%;
+  margin-left: 5%
+
 }
 
 .avatar{
-
-  background-image: url('../images/avatar.jpeg'); 
+  background-image: url('../images/download.png'); 
   background-repeat: no-repeat;
-  background-position: 18% 110%;
-  height: 98%;
-  width: 30%;
+  background-size: cover;
+  height: 250px;
+  width: 250px;
+  margin-top: 5%;
+  border-radius: 50%;
+}
 
+.yourkeywords {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: orange;
+  font-size: 30px;
+  margin: 10px;
+
+}
+
+.keywords {
+  color: orange;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.mainbar {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5%;
+}
+
+
+.mainbartitle {
+  width: 95%;
+  height: 75px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: orange;
+  border-bottom: 2px solid orange;
+}
+
+.jobitems {
+  width: 95%;
+  margin-top: 10px;
+  background: #427EBA;
+  height: 100%;
+  
 }
 
 .my-list{
@@ -18,35 +83,108 @@
   color: orange;
 }
 
-.list-container{
+.job-item {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-left: 2%;
+  padding-top: 22px;
+}
 
-  position: absolute;
-  top: 330px;
-  bottom: 15px;
-  right: -290px;
-  left: 330px;
+.logo{
+  height: 55px;
+  width: 150px;
+}
+
+.job-container {
+  background-color: white;
+  width: 250px;
+  border: 7px solid #407EB4;
+  border-radius: 2.5px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid orange;
+  height: 240px;
+}
+
+.jobmaininfo {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.company-logo {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  padding-bottom: 2%;
 }
 
-.list-box{
-  height: 1000px;
-  width: 70%;
-  background: lightgray;
-  border: 1px solid #B1E6FB;
-  margin: 20px;
-  
-  padding-left: 100px;
-  padding-top: 50px;
-  padding-bottom: 20px;
+.company {
+  padding-bottom: 2%;
 }
 
-.job{
-    height: 200px;
-    width: 90%;
-    background: white;
-    margin: 10px 0px 15px 0px;
-    border: 1px solid #B1E6FB; 
+.job-title {
+  padding-bottom: 2%;
+}
+
+.job-location {
+  padding-bottom: 3%;
+}
+
+.company-name{
+  font-weight: bold;
+}
+
+.role {
+  font-weight: bold;
+}
+
+.location {
+  font-weight: bold;
+}
+
+.job-url {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+
+.apply-button {
+  background-color: #FFA500;
+  border: none;
+  color: white;
+  padding: 6px 50px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.job-url a:hover {
+  cursor: pointer;
+  text-shadow: 4px 0px 5px white;
+  outline: 2px solid #407EB4;
 
 }
+
+.delete-job{
+  text-align: center;
+}
+.delete-button {
+  background-color: #407EB4;
+  border: none;
+  color: white;
+  padding: 4px 67px;
+  border-radius: 1px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.delete-job button:hover {
+  cursor: pointer;
+  text-shadow: 4px 0px 5px white;
+  outline: 1px solid white;
+}
+
+
+
+
