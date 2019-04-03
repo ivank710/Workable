@@ -8,7 +8,8 @@ class Upload extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedFile: null
+      selectedFile: null,
+      keywords: null
     };
     this.onChangeHandler = this.onChangeHandler.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -36,6 +37,9 @@ class Upload extends React.Component {
       .then(res => {
         //KEYWORDS!!! 
         console.log(res);
+        this.setState({
+          keywords: res.data
+        })
       })
       .catch(function() {
         console.log("Failed");
