@@ -12,11 +12,23 @@ class UserPage extends React.Component {
 
     componentDidMount() {
       this.props.fetchUserJobs();
+      this.props.fetchKeywords();
     }
 
     render() {
         let userJobs = this.props.userJobs;
 
+        let keywords;
+        if (this.props.keywords === undefined) {
+          keywords = '';
+        } else {
+           keywords = this.props.keywords.keywords.map(el => {
+            return (
+              <span className='word'>&bull; {el}</span>
+            )
+          });
+          
+        }
 
         return(
          <Layout>
@@ -24,13 +36,17 @@ class UserPage extends React.Component {
               <div className="sidebar">
                 <div className="avatar"></div>
                   <UploadContainer />
-                  <div className='yourkeywords'>Your Keywords:</div>
+                  <div className='yourkeywords'>Your Keywords: </div>
                   <div className='keywords'>
+                    <div className='singleKeyword'>{keywords[0]}</div>
+                    <div className='singleKeyword'>{keywords[1]}</div>
+                    <div className='singleKeyword'>{keywords[2]}</div>
+                    <div className='singleKeyword'>{keywords[3]}</div>
+                    <div className='singleKeyword'>{keywords[4]}</div>
+                    {/* <div>keywords</div>
                     <div>keywords</div>
                     <div>keywords</div>
-                    <div>keywords</div>
-                    <div>keywords</div>
-                    <div>keywords</div>
+                    <div>keywords</div> */}
                   </div>
               </div>
 

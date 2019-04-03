@@ -15,6 +15,14 @@ const path = require("path");
 const pdf = require("pdf-parse");
 const fs = require("fs");
 const http = require('http');
+console.log(process.env.NODE_ENV)
+console.log(db)
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build'));
+  app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+  })
+}
 
 mongoose
   .connect(db, { useNewUrlParser: true })
