@@ -36,7 +36,6 @@ class Explore extends React.Component {
     
   }
 
-    // console.log(keywords.keywords)
 
     return (
 		  <Layout> 		
