@@ -173,3 +173,22 @@
   font-size: 50px;
   color: orange;  
 }
+
+
+.explorekeywords {
+  width: 90%;
+  display: flex;
+  min-height: 10%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+   font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 1px solid #427EBA;
+}
+
+.word {
+  margin-left: 2%;
+  margin-right: 2%;
+}

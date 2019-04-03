@@ -16,7 +16,7 @@ class Explore extends React.Component {
   }
 
   render() {
-    if (this.props.jobs === undefined) {
+    if (this.props.jobs[0] === undefined) {
       return (
         <div className='exploreloading'>
           <div className='loadingdiv'><i className="fas fa-spinner fa-spin"></i> Loading Page</div>
@@ -28,7 +28,7 @@ class Explore extends React.Component {
 
     let keywords = this.props.keywords.keywords.map(el => {
       return (
-        <span>{el}</span>
+        <span className='word'>&bull; {el}</span>
       )
     });
     console.log(keywords.keywords)
