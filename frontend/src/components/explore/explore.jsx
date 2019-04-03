@@ -28,7 +28,7 @@ class Explore extends React.Component {
   if (this.props.keywords === undefined) {
     keywords = '';
   } else {
-     keywords = this.props.keywords.keywords.map(el => {
+    keywords = this.props.keywords.keywords.slice(1, this.props.keywords.keywords.length).map(el => {
       return (
         <span className='word'>&bull; {el}</span>
       )
