@@ -48,7 +48,6 @@ class Upload extends React.Component {
           <div className="row">
             <div className="col-md-6">
               <form className="uploadform" onSubmit={this.handleSubmit}>
-                {/* // method="post" // encType="multipart/form-data" // action="/api/keywords/file-upload" */}
                 <label className="fileupload" htmlFor="myFile">Upload Resume </label>
                 <input name="myFile" id="myFile" type="file" onChange={this.onChangeHandler} />
                 <input className="uploadsubmit" type="submit" value="Submit" />

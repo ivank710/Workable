@@ -9,11 +9,7 @@ const Keyword = require('./models/Keyword');
 const bodyParser = require("body-parser");  //to parse json we sent to our frontend
 const passport = require('passport');
 const jobs = require('./routes/api/jobs');
-<<<<<<< HEAD
-const keywords = require("./routes/api/keywords");
-=======
 const keywords = require('./routes/api/keywords');
->>>>>>> 30159434dcf10e518794638038409cb818e399ad
 const userJobs = require('./routes/api/userJobs');
 const path = require("path");
 const pdf = require("pdf-parse");
@@ -37,53 +33,32 @@ require("./config/passport")(passport);
 
 //app will listen for get requests
 app.get("/", (req, res) => {
-<<<<<<< HEAD
-  //debugger
-  const keywords = new Keyword({
-    keywords: ["a", "b"],
-    user: "5c84644f6b06d1515900728a"
-  });
-
-  keywords.save();
-  // user.save();  //now this user is in our MongoDB
-=======
->>>>>>> 30159434dcf10e518794638038409cb818e399ad
   res.send("Hello World");
 });
 
-// app.post("/", (req, res) => {
-//   //debugger
-//   const keywords = new Keyword({
-//     keywords: ["a", "b"],
-//     user: "5c84644f6b06d1515900728a"
-//   });
 
-//   keywords.save();
-//   // user.save();  //now this user is in our MongoDB
-//   res.send("Hello World");
-// });
 
-app.post(
-  "/",
-  passport.authenticate("jwt", {
-    session: false
-  }),
-  (req, res) => {
-    const keyword = new Keyword({
-      keywords: ["hello"],
-      user: "5c84644f6b06d1515900728a"
-    });
+// app.post(
+//   "/",
+//   passport.authenticate("jwt", {
+//     session: false
+//   }),
+//   (req, res) => {
+//     const keyword = new Keyword({
+//       keywords: ["hello"],
+//       user: "5c84644f6b06d1515900728a"
+//     });
 
-    keyword
-      .save()
-      .then(key => res.json(key))
-      .catch(error =>
-        res.status(422).json({
-          uniqueness: "Keyword is saved already"
-        })
-      );
-  }
-);
+//     keyword
+//       .save()
+//       .then(key => res.json(key))
+//       .catch(error =>
+//         res.status(422).json({
+//           uniqueness: "Keyword is saved already"
+//         })
+//       );
+//   }
+// );
 
 //tells express to use these routes
 app.use("/api/users", users);
