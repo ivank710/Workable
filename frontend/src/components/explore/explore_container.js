@@ -8,7 +8,7 @@ const msp = state => ({
 });
 
 const mdp = dispatch => ({
-    getJobs: (location) => dispatch(getJobs(location)),
+    getJobs: (location, keywords) => dispatch(getJobs(location,keywords)),
     getAllJobs: () => dispatch(getAllJobs()),
     saveJob: (job) => dispatch(saveJob(job))
 });
