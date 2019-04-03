@@ -6,6 +6,7 @@ class JobIndexItem extends React.Component {
   constructor(props) {
     super(props);
     
+    this.handleSave = this.handleSave.bind(this);
   }
 
   checkImage(){
@@ -20,9 +21,15 @@ class JobIndexItem extends React.Component {
     }
   }
 
+  handleSave(e) {
+    e.preventDefault();
+    this.props.saveJob(this.props.job);
+  }
+
   render() {
     return (
       <div className="content-container">
+
         <div className="left-content">
           <div className="content-type-left">
             <span className="content-label">Title:</span>{" "}
@@ -37,9 +44,12 @@ class JobIndexItem extends React.Component {
             <a id="apply-now" href={this.props.job.company_url}>
               Apply Now
             </a>
+          <div className="content-type-left">
+            <button className="save-button" onClick={this.handleSave}>Save To My List</button>
           </div>
           <div className="company-image">{this.checkImage()}</div>
         </div>
+      </div>
         <div className="right-content">
           <div className="right-content-top">
             <div className="content-type-right">

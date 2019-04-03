@@ -33,6 +33,12 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.searchbutton:hover {
+  cursor: pointer;
+  outline: 2px solid #407EB4;
+}
+
+
 .searchinput {
   margin: auto;
   color: black;
@@ -63,7 +69,7 @@
   height: 300px;
   width: 90%;
   background: white;
-  margin: 10px 0px 5px 0px;
+  margin: 50px 0px 5px 0px;
   border: 3px solid orange;
   display: flex;
   flex-direction: row;
@@ -95,9 +101,24 @@
   font-size: 20px;
 }
 
-.content-type {
-  font-family: "Open Sans", sans-serif;
+.content-type-left a:hover {
+  cursor: pointer;
+  outline: 2px solid #407EB4;
+
 }
+
+.save-button {
+  color: white;
+  background-color: orange;
+  padding: 6px;
+}
+
+.content-type-left button:hover {
+  cursor: pointer;
+  outline: 2px solid #407EB4;
+
+}
+
 
 .right-content-top {
   display: flex;
@@ -144,7 +165,7 @@
 #apply-now {
   color: white;
   background-color: orange;
-  padding: 2px;
+  padding: 3px;
   border: 3px solid orange;
 }
 
@@ -177,4 +198,34 @@
   font-size: 18px;
   font-weight: bolder;
   margin: 6px 3px;
+}
+.exploreloading {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25%;
+}
+
+.loadingdiv {
+  font-size: 50px;
+  color: orange;  
+}
+
+
+.explorekeywords {
+  width: 90%;
+  display: flex;
+  min-height: 10%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+   font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 1px solid #427EBA;
+}
+
+.word {
+  margin-left: 2%;
+  margin-right: 2%;
 }

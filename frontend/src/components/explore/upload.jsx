@@ -1,62 +1,65 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
-import axios from 'axios';
-import FormData from 'form-data';
-// import './upload.css';
+import React from "react";
+import { withRouter, Link } from "react-router-dom";
+import axios from "axios";
+import FormData from "form-data";
+import '../../css/_upload.css';
 
 class Upload extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selectedFile: null, loaded: 0 };
+    this.state = {
+      selectedFile: null,
+      keywords: null
+    };
     this.onChangeHandler = this.onChangeHandler.bind(this);
-    this.onClickHandler = this.onClickHandler.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  // componentDidMount() {
-  //   fetch('https://jobs.github.com/positions.json?description=python&location=new+york')
-  //     .then(response => response.json())
-  // }
 
   onChangeHandler(event) {
-    console.log(event.target.files[0])
+    // console.log(event.target.files[0]);
     this.setState({
       selectedFile: event.target.files[0],
-      loaded: 0,
+      loaded: 0
     });
   }
 
-  onClickHandler() {
+  handleSubmit(ev) {
+    ev.preventDefault();
     const data = new FormData();
-    data.append('file', this.state.selectedFile)
-    // Pass in endpoint url and form data
-    axios.post("http://localhost:3000/file-upload", data, {
-    }).then(res => {
-      //Prints response after receiving from backend
-      console.log(res)
-      console.log(res.statusText)
-    }).catch(function () {
-      console.log('Failed');
-    });
-
+    //Send file and user ID to express backend
+    data.append("user", this.props.currentUser.id);
+    data.append("file", this.state.selectedFile);
+    // console.log(this.state.selectedFile)
+    axios
+      .post("/api/keywords/file-upload", data, {
+        headers: { "content-type": "multipart/form-data" }
+      })
+      .then(res => {
+        //KEYWORDS!!! 
+        console.log(res);
+        this.setState({
+          keywords: res.data
+        })
+      })
+      .catch(function() {
+        console.log("Failed");
+      });
   }
 
   render() {
-
     return (
       <div className="Upload">
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-
-              <form method="post" encType="multipart/form-data" action="/file-upload">
-                <input type="file" name="myFile" />
-                <input type="submit" value="Upload Now!" />
-              </form >
-
+              <form className="uploadform" onSubmit={this.handleSubmit}>
+                <label className="fileupload" htmlFor="myFile">Upload Resume </label>
+                <input name="myFile" id="myFile" type="file" onChange={this.onChangeHandler} />
+                <input className="uploadsubmit" type="submit" value="Submit" />
+              </form>
             </div>
           </div>
         </div>
-
       </div>
     );
   }

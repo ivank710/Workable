@@ -10,7 +10,15 @@ class LocationForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.getJobs(this.parseInput(this.state.location));
+        let keywords = this.props.keywords.keywords;
+        if (keywords.length === 0) {
+            keywords = 'empty';
+        } else {
+            // Take first few keywords to search
+            keywords = keywords.slice(-3).join('+');
+            console.log(keywords);
+        }
+        this.props.getJobs(this.parseInput(this.state.location), keywords);
     }
 
     update(field) {
