@@ -12,17 +12,27 @@ class Explore extends React.Component {
 
   componentDidMount() {
     this.props.getAllJobs();
+    this.props.fetchKeywords();
   }
 
   render() {
-    if (this.props.jobs[0] === undefined) {
+    if (this.props.jobs === undefined) {
       return (
         <div className='exploreloading'>
           <div className='loadingdiv'><i className="fas fa-spinner fa-spin"></i> Loading Page</div>
         </div>
       )
       
-	}
+  }
+  if (this.props.keywords === undefined) return null
+
+    let keywords = this.props.keywords.keywords.map(el => {
+      return (
+        <span>{el}</span>
+      )
+    });
+    console.log(keywords.keywords)
+
     return (
 		  <Layout> 		
         <div className="explore">
@@ -30,9 +40,11 @@ class Explore extends React.Component {
               
             <div className='searchtext'>&nbsp; &nbsp; See what's new around:</div>
 					  <div>
-					    <LocationForm getJobs={this.props.getJobs} />
+					    <LocationForm keywords={this.props.keywords}  getJobs={this.props.getJobs} />
 					  </div>
+
 					</div>
+          <div className='explorekeywords'>Keywords Used: {keywords}</div>
           <div className="explorecontent">
             {this.props.jobs.map(job => (
               <JobIndexItem job={job} key={job.id} saveJob={this.props.saveJob}/>
