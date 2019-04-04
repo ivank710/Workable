@@ -27,12 +27,12 @@ class UserJobItem extends React.Component {
   render() {
     return (
       <div className="job-container">
-        <div className="company-logo">{this.checkImage()}</div>
+        {/* <div className="company-logo">{this.checkImage()}</div> */}
 
         <div className='jobmaininfo'>
           <div className="company">
             <span className="company-name">Company: </span>
-            {this.props.job.company}
+           <span className="job-company"> {this.props.job.company} </span>
           </div>
 
           <div className="job-title">

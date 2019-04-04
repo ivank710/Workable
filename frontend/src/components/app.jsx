@@ -6,8 +6,6 @@ import MainPageContainer from './main/main_page_container';
 import ExploreContainer from './explore/explore_container';
 import UserPageContainer from './userpage/user_page_container';
 
-
-
 const App = () => (
   <div>
     <Modal />

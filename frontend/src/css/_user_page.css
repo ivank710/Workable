@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Passion+One);
+
 .usermain {
   display: flex;
   justify-content: center;
@@ -32,9 +34,10 @@
 }
 
 .yourkeywords {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Passion One';
   color: black;
-  font-size: 30px;
+  font-size: 35px;
+  letter-spacing: 1px;
   margin: 10px;
   min-width: 200px;
   width: 250px;
@@ -73,8 +76,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 52px;
+  letter-spacing: 4px;
+  font-family: 'Passion One';
   color: rgb(34, 33, 32);
   border-bottom: 1px solid rgb(34, 30, 23);
 }
@@ -108,7 +112,10 @@
 }
 
 .job-container {
-  background-color: white;
+  background: #abbaab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   width: 400px;
   border: 7px solid #407EB4;
   border-radius: 2.5px;
@@ -148,6 +155,10 @@
   font-weight: bold;
 }
 
+.job-company {
+  /* font-weight: bold; */
+}
+
 .role {
   font-weight: bold;
 }
@@ -161,6 +172,8 @@
   justify-content: center;
   padding-bottom: 5%;
 }
+
+
 
 .apply-button {
   background-color: #FFA500;
@@ -199,7 +212,7 @@
 
 
 .card-holder {
-  margin: 2em 0;
+  /* margin: 2em 0; */
 }
 
 .card {
@@ -209,7 +222,6 @@
   height: 4em;
   width: 64em;
   padding: 0.5em 1em;
-  border-radius: 0.25em;
   display: table-cell;
   vertical-align: middle;
   letter-spacing: -2px;
