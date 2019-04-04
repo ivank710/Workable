@@ -55,7 +55,7 @@ class UserPage extends React.Component {
           </div>
 
           <div className="mainbar">
-            <div className="mainbartitle">My Saved Jobs</div>
+            <div className="mainbartitle">Saved Jobs</div>
             <div className="jobitems">
               <div className="job-item">
                 {this.props.userJobs.map(jobItem => (

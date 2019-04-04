@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
 
 
 .splash-container{
@@ -12,8 +13,14 @@
   background-image: url('../images/dot-jobs.jpg'); 
   background-repeat: no-repeat;
   background-position: center;
-  z-index: -1;
-  height: 81vh;
+  z-index: 10;
+  height: 71vh;
+  
+}
+
+.home-container {
+  width: 100%;
+  height: 100%;
 }
 
 .splash-title{
@@ -23,6 +30,7 @@
   font-size: 120px;
   color: orange;
   font-weight: normal;
+  
 }
 
 .splash-slogan{
@@ -32,37 +40,45 @@
   font-size: 35px;
   font-weight: lighter;
   font-family: serif;
-  color: orange;
+  color: #4b57be;
 }
 
 .splash-buttons{
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .login{
-  font-size: 40px;
-  font-weight: lighter;
-  font-family: serif;
-  border: 3px solid orange;
-  border-radius: 2px;
-  background-color: orange;
+  width: 110px;
+  height: 55px;
   color: white;
-  padding: 18px 40px;
+  font-size: 16px;
+  font-weight: 550;
+  background-color: #000000;
+  border-radius: 4px;
+  text-align: center;
+  outline: none;
+  border: 0px solid;
   cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
+
 }
 
 .signup{
-  font-size: 40px;
-  font-family: serif;
-  font-weight: lighter;
-  border: 3px solid orange;
-  border-radius: 2px;
-  background-color: orange;
+  width: 110px;
+  height: 55px;
   color: white;
-  padding: 18px 33px;
-
+  font-size: 16px;
+  font-weight: 550;
+  background-color: #000000;
+  border-radius: 4px;
+  text-align: center;
+  outline: none;
+  border: 0px solid;
   cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
+
 }
 
 .footer{

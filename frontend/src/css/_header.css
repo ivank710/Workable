@@ -1,0 +1,121 @@
+.WelcomeHeader {
+  display: flex;
+  font-weight: 500;
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  background-color: #1652f0;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  width: 100%;
+}
+
+.LoggedIn {
+  display: flex;
+  font-weight: 500;
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  background-color: rgb(6, 103, 208);
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  width: 100%;
+}
+
+
+.WelcomeLogo {
+  letter-spacing: 0px;
+  margin-left: 60px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.WelcomeLogo:hover, .WelcomeLogo:active, .WelcomeLogo:focus{
+  cursor: pointer;
+  user-select: none;
+}
+
+.Welcome-Sessions {
+  margin-top: 10px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.HeaderLink, .HeaderLink:hover, .HeaderLink:active, .HeaderLink:focus {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.WelcomeSignup {
+  color: white;
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 20px;
+
+  box-sizing: border-box;
+  border: 1.5px solid white;
+  border-radius: 2px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 13px;
+  padding-bottom: 12px;
+}
+
+.WelcomeSignup:hover {
+  background-color: white;
+  color: darkblue;
+  
+  cursor: pointer;
+  user-select: none;
+}
+
+
+
+
+
+.WelcomeLogin {
+  color: white;
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  margin-right: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.WelcomeLogin:hover, .WelcomeLogin:active, .WelcomeLogin:focus{
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+
+.WelcomeLogin:hover{
+  color: lightgrey;
+}
+
+.loggedIn {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 15px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.total {
+  background-color: white; 
+  height: 100%;
+  min-height: 100%;
+}
