@@ -94,6 +94,10 @@
 .content-type-left {
   padding: 6px;
   font-size: 16px;
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-label {
@@ -158,7 +162,7 @@
   display: flex;
   justify-content: center;
   height: 100px;
-  width: 150px;
+  width: 175px;
   margin: 10px;
 }
 
@@ -170,8 +174,8 @@
 }
 
 #modal-description-container{
-  width: 1000px;
-  height: 800px;
+  width: 300%;
+  height: 120%;
   background-color: white;
   position: absolute;
   left: 50%;
