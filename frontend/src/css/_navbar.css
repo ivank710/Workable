@@ -1,7 +1,9 @@
 .navbar {
     width: 100%vw;
     height: 60px;
-    background: orange;
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
     align-items: center;
     color: white;
@@ -18,11 +20,12 @@
 }
 
 .maintitle {
-    font-size: 28px;
+    font-size: 30px;
+    font-weight: 600;
     letter-spacing: .3em;
     display: flex;
     align-self: center;
-  
+    color: black;
     margin-left: 100px;
 }
 
@@ -55,3 +58,10 @@
     border-radius: 3px;
 } */
 
+.navlink {
+    color: black;
+}
+
+.home {
+    color: black;
+}
