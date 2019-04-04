@@ -28,7 +28,7 @@ class Explore extends React.Component {
   if (this.props.keywords === undefined) {
     keywords = '';
   } else {
-     keywords = this.props.keywords.keywords.map(el => {
+    keywords = this.props.keywords.keywords.slice(1, this.props.keywords.keywords.length).map(el => {
       return (
         <span className='word'>&bull; {el}</span>
       )
@@ -52,7 +52,9 @@ class Explore extends React.Component {
           <div className='explorekeywords'>Keywords Used: {keywords}</div>
           <div className="explorecontent">
             {this.props.jobs.map(job => (
-              <JobIndexItem job={job} key={job.id} saveJob={this.props.saveJob}/>
+              <>
+                <JobIndexItem job={job} key={job.id} saveJob={this.props.saveJob} openModalDescription={this.props.openModalDescription} />
+              </>
             ))}
           </div>
 				</div>
