@@ -38,15 +38,11 @@ class UserPage extends React.Component {
                   <UploadContainer />
                   <div className='yourkeywords'>Your Keywords: </div>
                   <div className='keywords'>
-                    <div className='singleKeyword'>{keywords[0]}</div>
                     <div className='singleKeyword'>{keywords[1]}</div>
                     <div className='singleKeyword'>{keywords[2]}</div>
                     <div className='singleKeyword'>{keywords[3]}</div>
                     <div className='singleKeyword'>{keywords[4]}</div>
-                    {/* <div>keywords</div>
-                    <div>keywords</div>
-                    <div>keywords</div>
-                    <div>keywords</div> */}
+                    <div className='singleKeyword'>{keywords[5]}</div>
                   </div>
               </div>
 
@@ -63,14 +59,6 @@ class UserPage extends React.Component {
                 </div>
               </div>
            </div>
-{/*            
-          <div className="list-container">
-            <div className="my-list">My Saved Jobs</div>
-            <div className="list-box">
-            <div className="job">vdfv fdz dfs</div>
-          
-            </div>
-          </div> */}
          </Layout>
         )
     }

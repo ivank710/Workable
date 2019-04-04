@@ -40,7 +40,9 @@ class Upload extends React.Component {
         this.setState({
           keywords: res.data
         })
-      })
+      }).then(() =>
+        this.props.fetchKeywords()
+      )
       .catch(function() {
         console.log("Failed");
       });
