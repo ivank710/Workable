@@ -3,7 +3,10 @@
   justify-content: center;
   align-items: center;
   height: 1000px;
-}
+  background: #FDC830;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 
 .sidebar{
   display: flex;
@@ -13,7 +16,8 @@
   height: 100%;
   margin: 5px;
   margin-right: 3%;
-  margin-left: 5%
+  margin-left: 5%;
+  min-width: 120px;
 
 }
 
@@ -29,14 +33,15 @@
 
 .yourkeywords {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: orange;
+  color: black;
   font-size: 30px;
   margin: 10px;
-
+  min-width: 200px;
+  width: 250px;
 }
 
 .keywords {
-  color: orange;
+  color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 24px;
   display: flex;
@@ -57,27 +62,28 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 5%;
+  
 }
 
 
 .mainbartitle {
   width: 95%;
   height: 75px;
-  background: white;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 50px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: orange;
-  border-bottom: 2px solid orange;
+  color: rgb(34, 33, 32);
+  border-bottom: 1px solid rgb(34, 30, 23);
 }
 
 .jobitems {
   width: 95%;
   margin-top: 10px;
-  background: #427EBA;
-  height: 100%;
+  /* background: #427EBA; */
+  height: 80%;
   
 }
 
@@ -103,7 +109,7 @@
 
 .job-container {
   background-color: white;
-  width: 250px;
+  width: 400px;
   border: 7px solid #407EB4;
   border-radius: 2.5px;
   padding: 5px;
@@ -187,4 +193,51 @@
   cursor: pointer;
   text-shadow: 4px 0px 5px white;
   outline: 1px solid white;
+}
+
+
+
+
+.card-holder {
+  margin: 2em 0;
+}
+
+.card {
+  font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
+  font-size: 3em;
+  font-weight: 800;
+  height: 4em;
+  width: 64em;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  display: table-cell;
+  vertical-align: middle;
+  letter-spacing: -2px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  min-width: 200px;
+}
+
+.card .subtle {
+  color: #000;
+  font-size: 0.5em;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.card i {
+  font-size: 3em;
+}
+
+.bg-gold {
+  background: -webkit-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  background: -o-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  background: -moz-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+
+.bg-news {
+  background: -webkit-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+  background: -o-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+  background: -moz-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+  background: linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
 }

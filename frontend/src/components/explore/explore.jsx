@@ -19,7 +19,7 @@ class Explore extends React.Component {
     if (this.props.jobs[0] === undefined) {
       return (
         <div className='exploreloading'>
-          <div className='loadingdiv'><i className="fas fa-spinner fa-spin"></i> Loading Page</div>
+          <div className='loadingdiv'><i className="fas fa-spinner fa-spin"></i> </div>
         </div>
       )
       
