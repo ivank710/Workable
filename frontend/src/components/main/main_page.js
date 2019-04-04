@@ -60,13 +60,6 @@ class MainPage extends React.Component {
         <div className="footer">{/* <footer>Copyright</footer> */}</div>
 
         </div>
-        
-        {/* <div class="card-holder">
-        <div class="card bg-news">
-          Upload Resume <br/> 
-          Get personalized job listings from multiple Job API's 
-        </div>
-        </div> */}
 
       {/* Get Started Component  */}
         <div className="GetStarted">
