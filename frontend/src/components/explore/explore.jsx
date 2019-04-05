@@ -40,25 +40,36 @@ class Explore extends React.Component {
 
 
     return (
-		  <Layout> 		
+      <Layout>
         <div className="explore">
-					<div className="header">
-              
-            <div className='searchtext'>&nbsp; &nbsp; See what's new around:</div>
-					  <div>
-					    <LocationForm keywords={this.props.keywords}  getJobs={this.props.getJobs} />
-					  </div>
-
-					</div>
-          <div className='explorekeywords'>Keywords Used: {keywords}</div>
+          <div className="header">
+            <div className="searchtext">
+              &nbsp; &nbsp; See what's new around:
+            </div>
+            <div>
+              <LocationForm
+                keywords={this.props.keywords}
+                getJobs={this.props.getJobs}
+              />
+            </div>
+          </div>
+          <div className="explorekeywords">
+            {" "}
+            <div class="keyword-title">Keywords Used:</div> {keywords}
+          </div>
           <div className="explorecontent">
             {this.props.jobs.map(job => (
               <>
-                <JobIndexItem job={job} key={job.id} saveJob={this.props.saveJob} openModalDescription={this.props.openModalDescription} />
+                <JobIndexItem
+                  job={job}
+                  key={job.id}
+                  saveJob={this.props.saveJob}
+                  openModalDescription={this.props.openModalDescription}
+                />
               </>
             ))}
           </div>
-				</div>
+        </div>
       </Layout>
     );
   };

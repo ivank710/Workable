@@ -54,7 +54,7 @@ class UserJobItem extends React.Component {
 
         <div className="delete-job">
           <button className="delete-button" onClick={this.handleDelete}>
-            Delete
+            Delete this job
           </button>
         </div>
       </div>

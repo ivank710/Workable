@@ -39,10 +39,10 @@ class NavBar extends React.Component {
     return (
       <div className='navbar'>
         <div className='navbarsub'>
-          <Link to='/explore'><div className="home">Home</div></Link>
-          <div className='maintitle'>Workable</div>
+          <Link to='/explore'><div className="title">Workable</div></Link>
           <div className='navright'>
-            <Link to='/user'><div className='navlink'>My Profile</div></Link>
+            <Link to='/explore' className="navlink">Home</Link>
+            <Link to='/user' className='navlink'>My Profile</Link>
             <button className='navlink' onClick={this.props.logout} >Logout</button>
           </div>
         </div>
