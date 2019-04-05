@@ -39,7 +39,7 @@ class MainPage extends React.Component {
           <h3>Find your future today!</h3>
         </div>
 
-        <div className="splash-buttons">
+        {/* <div className="splash-buttons">
           <button
             className="login"
             onClick={() => this.props.openModal("login")}
@@ -55,7 +55,7 @@ class MainPage extends React.Component {
             {" "}
             Sign Up
           </button>
-        </div>
+        </div> */}
          
         <div className="footer">{/* <footer>Copyright</footer> */}</div>
 

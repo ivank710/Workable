@@ -3,11 +3,9 @@
 .usermain {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 1000px;
-  background: #FDC830;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
   }
 
 .sidebar{
@@ -34,9 +32,11 @@
 }
 
 .yourkeywords {
-  font-family: 'Passion One';
+  /* font-family: 'Passion One'; */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
   color: black;
-  font-size: 35px;
+  font-size: 28px;
   letter-spacing: 1px;
   margin: 10px;
   min-width: 200px;
@@ -78,7 +78,8 @@
   align-items: center;
   font-size: 52px;
   letter-spacing: 4px;
-  font-family: 'Passion One';
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* font-family: 'Passion One'; */
   color: rgb(34, 33, 32);
   border-bottom: 1px solid rgb(34, 30, 23);
 }
@@ -113,9 +114,7 @@
 
 .job-container {
   background: #abbaab;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: linear-gradient(to right, #b8dee6, #427eba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   width: 400px;
   border: 7px solid #407EB4;
   border-radius: 2.5px;
@@ -131,6 +130,9 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-bottom: 5%;
+  font-size: 18px;
+  height: fit-content;
 }
 
 .company-logo {
@@ -179,13 +181,15 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
   background-color: #FFA500;
   border: none;
   color: white;
-  padding: 6px 50px;
+      width: 175px;
+    padding: 5px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
 .job-url a:hover {
   cursor: pointer;
-  text-shadow: 4px 0px 5px white;
+  /* text-shadow: 4px 0px 5px white; */
   outline: 2px solid #407EB4;
 
 }
@@ -194,18 +198,21 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
   text-align: center;
 }
 .delete-button {
-  background-color: #407EB4;
+  text-align: center;
+  background-color: #FFA500;
   border: none;
   color: white;
-  padding: 4px 67px;
+  width: 175px;
+  padding: 5px;
   border-radius: 1px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .delete-job button:hover {
   cursor: pointer;
-  text-shadow: 4px 0px 5px white;
-  outline: 1px solid white;
+  /* text-shadow: 2px 0px 2px white; */
+  outline: 2px solid #407EB4;
+
 }
 
 
@@ -216,7 +223,7 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
 }
 
 .card {
-  font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif; */
   font-size: 3em;
   font-weight: 800;
   height: 4em;
