@@ -39,7 +39,8 @@
 
 .searchbutton:hover {
   cursor: pointer;
-  outline: 2px solid #407EB4;
+  border: 2px solid #407EB4;
+  border-radius: 3px;
 }
 
 
