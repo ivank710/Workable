@@ -29,28 +29,31 @@ class JobIndexItem extends React.Component {
   render() {
     return (
       <div className="content-container">
-
         <div className="left-content">
           <div className="content-type-left">
-            {/* <span className="content-label">Title:</span> */}
-            {" "}
-            <span className="content-title">{this.props.job.title}</span><br></br>
+            {/* <span className="content-label">Title:</span> */}{" "}
+            <span className="content-title">{this.props.job.title}</span>
+            <br />
           </div>
           <div className="content-type-left">
             {/* <span className="content-label">Company:</span>{" "} */}
-            <span className="content-title">Company: {this.props.job.company}</span>
+            <span className="content-title">
+              <strong>Company:</strong> {this.props.job.company}
+            </span>
           </div>
           <div />
           <div className="content-type-left">
             <a id="apply-now" href={this.props.job.company_url}>
               Apply Now
             </a>
-          <div className="content-type-left">
-            <button className="save-button" onClick={this.handleSave}>Save To My List</button>
+            <div className="content-type-left">
+              <button className="save-button" onClick={this.handleSave}>
+                Save To My List
+              </button>
+            </div>
+            {/* <div className="company-image">{this.checkImage()}</div> */}
           </div>
-          {/* <div className="company-image">{this.checkImage()}</div> */}
         </div>
-      </div>
         <div className="right-content">
           <div className="right-content-top">
             <div className="content-type-right">
