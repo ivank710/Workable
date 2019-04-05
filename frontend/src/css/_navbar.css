@@ -1,9 +1,9 @@
 .navbar {
     width: 100%vw;
     height: 60px;
-    background: #FDC830;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #4480B7;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #F37335, #FDC830);  
+    background: linear-gradient(to right, #F37335, #FDC830);  */
     display: flex;
     align-items: center;
     color: white;
@@ -17,25 +17,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 7px 25px 0px 25px;
+    border-bottom: 2px solid;
+    font-family: 'Adamina', serif;;
 }
 
-.maintitle {
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: .3em;
-    display: flex;
-    align-self: center;
-    color: black;
-    margin-left: 100px;
-}
 
 
 .navright {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     height: 100%;
-    width: 150px;
+    width: 285px;
 }
 
 .navlink:hover {
@@ -59,9 +52,9 @@
 } */
 
 .navlink {
-    color: black;
+    /* color: black; */
 }
 
 .home {
-    color: black;
+    /* color: black; */
 }
