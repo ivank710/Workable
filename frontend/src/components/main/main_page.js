@@ -6,11 +6,11 @@ import '../../css/_header.css';
 import NavBarContainer from '../../components/nav/navbar_container'
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBriefcase, faBookmark, faUpload } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faBookmark, faUpload } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faBriefcase, faBookmark, faUpload)
+library.add(faBriefcase, faBookmark, faUpload);
 class MainPage extends React.Component {
 
   render() {

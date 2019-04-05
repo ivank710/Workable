@@ -10,10 +10,10 @@
   align-items: center;
   flex-direction: column;
   /* background-color: white; */
-  background: -webkit-linear-gradient(70deg, #ff6464 50%, #5ac8fa 50%);
-  background: -o-linear-gradient(70deg, #ff6464 50%, #5ac8fa 50%);
-  background: -moz-linear-gradient(70deg, #ff6464 50%, #5ac8fa 50%);
-  background: linear-gradient(70deg, #ff6464 50%, #5ac8fa 50%);
+  background: -webkit-linear-gradient(70deg, #407EBB 50%, #F1B155 50%);
+  background: -o-linear-gradient(70deg, #407EBB 50%, #F1B155 50%);
+  background: -moz-linear-gradient(70deg, #407EBB 50%, #F1B155 50%);
+  background: linear-gradient(70deg, #407EBB 50%, #F1B155 50%);
 
 }
 
