@@ -19,14 +19,16 @@
 
 .searchtext {
   font-family: 'Adamina', serif;;
+  font-family: 'Adamina', serif;;
   font-size: 25px;
+  
   
 }
 
 .searchbutton {
   background: orange;
   color: white;
-  border: 2px solid black;
+  border: 1px solid #4480B7;
   border-radius: 5px;
   width: 100px;
   text-align: center;
@@ -117,6 +119,7 @@ background: linear-gradient(to right,#427eba, #b8dee6); /* W3C, IE 10+/ Edge, Fi
   outline: 2px solid #407EB4;
 
 }
+
 
 
 .content-type-left button:hover {
@@ -267,4 +270,8 @@ background: linear-gradient(to right,#427eba, #b8dee6); /* W3C, IE 10+/ Edge, Fi
 
 .keyword-title {
   text-decoration: underline;
+}
+
+.company {
+  font-weight: bold;
 }
