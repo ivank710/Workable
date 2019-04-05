@@ -3,10 +3,9 @@
 .usermain {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 1000px;
-  background: white;  /* fallback for old browsers */
-
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
   }
 
 .sidebar{
@@ -113,10 +112,8 @@
 
 .job-container {
   background: #abbaab;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-family: 'Adamina', serif;
-  width: 275px;
+  background: linear-gradient(to right, #b8dee6, #427eba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 400px;
   border: 7px solid #407EB4;
   border-radius: 2.5px;
   padding: 5px;
@@ -131,6 +128,9 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-bottom: 5%;
+  font-size: 18px;
+  height: fit-content;
 }
 
 .company-logo {
@@ -195,10 +195,12 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
   text-align: center;
 }
 .delete-button {
-  background-color: #407EB4;
+  text-align: center;
+  background-color: #FFA500;
   border: none;
   color: white;
-  padding: 4px 67px;
+  width: 175px;
+  padding: 5px;
   border-radius: 1px;
   font-family: 'Adamina', serif;
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
@@ -218,7 +220,7 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
 }
 
 .card {
-  font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif; */
   font-size: 3em;
   font-weight: 800;
   height: 4em;
