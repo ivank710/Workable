@@ -32,7 +32,7 @@ class MainPage extends React.Component {
 
         <div className="splash-container">
           <div className="splash-title">
-            <h1>Workable</h1>
+            {/* <h1>Workable</h1> */}
           </div>
         </div>
         <div className="splash-slogan">

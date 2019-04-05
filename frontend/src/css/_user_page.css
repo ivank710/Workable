@@ -5,9 +5,8 @@
   justify-content: center;
   align-items: center;
   height: 1000px;
-  background: #FDC830;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: white;  /* fallback for old browsers */
+
   }
 
 .sidebar{
@@ -34,18 +33,19 @@
 }
 
 .yourkeywords {
-  font-family: 'Passion One';
-  color: black;
-  font-size: 35px;
-  letter-spacing: 1px;
+  font-family: 'Adamina', serif;
+  color: #4480B7;
+  font-size: 31px;
+  /* letter-spacing: 1px; */
   margin: 10px;
   min-width: 200px;
   width: 250px;
+  text-decoration: underline;
 }
 
 .keywords {
   color: black;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Adamina', serif;
   font-size: 24px;
   display: flex;
   flex-direction: column;
@@ -55,6 +55,7 @@
 
 .singleKeyword {
   min-width: 120px;
+  color: #4480B7;
 }
 
 .mainbar {
@@ -77,10 +78,9 @@
   justify-content: center;
   align-items: center;
   font-size: 52px;
-  letter-spacing: 4px;
-  font-family: 'Passion One';
-  color: rgb(34, 33, 32);
-  border-bottom: 1px solid rgb(34, 30, 23);
+  font-family: 'Adamina', serif;
+  color: #4480B7;
+  border-bottom: 1px solid #4480B7;
 }
 
 .jobitems {
@@ -115,18 +115,18 @@
   background: #abbaab;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  width: 400px;
+  font-family: 'Adamina', serif;
+  width: 275px;
   border: 7px solid #407EB4;
   border-radius: 2.5px;
   padding: 5px;
   margin: 10px;
   border: 1px solid orange;
-  height: 240px;
+  height: 210px;
 }
 
 .jobmaininfo {
-  height: 100px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -180,12 +180,13 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
   border: none;
   color: white;
   padding: 6px 50px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Adamina', serif;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
 .job-url a:hover {
   cursor: pointer;
-  text-shadow: 4px 0px 5px white;
+  /* text-shadow: 4px 0px 5px white; */
   outline: 2px solid #407EB4;
 
 }
@@ -199,13 +200,14 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
   color: white;
   padding: 4px 67px;
   border-radius: 1px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Adamina', serif;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
 .delete-job button:hover {
   cursor: pointer;
-  text-shadow: 4px 0px 5px white;
-  outline: 1px solid white;
+  /* text-shadow: 4px 0px 5px white; */
+  outline: 2px solid white;
 }
 
 
@@ -221,19 +223,19 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
   font-weight: 800;
   height: 4em;
   width: 64em;
-  padding: 0.5em 1em;
+  padding: 15px;
   display: table-cell;
   vertical-align: middle;
-  letter-spacing: -2px;
+  /* letter-spacing: -2px; */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   min-width: 200px;
 }
 
 .card .subtle {
-  color: #000;
-  font-size: 0.5em;
-  font-weight: 400;
-  letter-spacing: -1px;
+  color: #4480B7;
+  font-size: 18px;
+  /* font-weight: 400; */
+  /* letter-spacing: -1px; */
 }
 
 .card i {
@@ -241,10 +243,11 @@ background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, F
 }
 
 .bg-gold {
-  background: -webkit-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  /* background: -webkit-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
   background: -o-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
   background: -moz-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
-  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); */
+  border: 2px solid #4480B7; 
 }
 
 .bg-news {

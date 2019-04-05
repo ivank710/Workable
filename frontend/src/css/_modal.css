@@ -16,6 +16,7 @@
   height: 400px;
   width:300px;
   background: #4480B7;
+  border-radius: 4px;
 }
 
 .modal-header{
@@ -87,6 +88,10 @@
   display: flex;
   justify-content: center;
   align-self: center;
+}
+
+.submit-modal:hover {
+  text-shadow: 4px 2px 7px white;
 }
 
 .error-display{

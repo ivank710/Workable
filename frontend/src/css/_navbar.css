@@ -18,7 +18,7 @@
     align-items: center;
     padding: 7px 25px 0px 25px;
     border-bottom: 2px solid;
-    font-family: 'Adamina', serif;;
+    font-family: 'Adamina', serif;
 }
 
 
@@ -39,6 +39,10 @@
 .home:hover {
   cursor: pointer;
   text-shadow: 4px 0px 5px white;
+}
+
+.title {
+    font-size: 25px;
 }
 /* 
 .navlink {
