@@ -39,8 +39,9 @@
 /* 
 .searchbutton:hover {
   cursor: pointer;
-  outline: 2px solid #407EB4;
-} */
+  border: 2px solid #407EB4;
+  border-radius: 3px;
+}
 
 
 .searchinput {
@@ -57,7 +58,7 @@
   margin: 0px 10px 0px 10px;
   font-family: 'Adamina', serif;;
 }
-
+*/
 .explorecontent {
   height: 100%;
   width: 90%;

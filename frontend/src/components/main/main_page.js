@@ -16,15 +16,15 @@ class MainPage extends React.Component {
   render() {
     return (
       <>
-    {/* <div className="WelcomeHeader">
+    <div className="WelcomeHeader">
         <div className="WelcomeLogo">
           <p className="HeaderLink" > Workable </p>
         </div>
         <div className="Welcome-Sessions">
-          <p className="WelcomeLogin"> Sign in </p>
-          <p className="WelcomeSignup"> Get started </p> 
+          <p onClick={() => this.props.openModal("login")} className="WelcomeLogin"> Sign in </p>
+          <p onClick={() => this.props.openModal("signup")} className="WelcomeSignup"> Get started </p> 
         </div>
-      </div> */}
+      </div>
 
 {/* <NavBarContainer /> */}
 
@@ -36,7 +36,7 @@ class MainPage extends React.Component {
           </div>
         </div>
         <div className="splash-slogan">
-          {/* <h3>Find your future today!</h3> */}
+          <h3>Find your future today!</h3>
         </div>
 
         <div className="splash-buttons">
@@ -63,7 +63,7 @@ class MainPage extends React.Component {
 
       {/* Get Started Component  */}
         <div className="GetStarted">
-        <h1> Find your future today! </h1>
+        {/* <h1> Find your future today! </h1> */}
         {/* <p className="lowerText"> Workable is built to help you find job listings </p> */}
 
         <div className="GetStartedDivs">
