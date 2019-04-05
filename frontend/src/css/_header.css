@@ -1,7 +1,8 @@
 .WelcomeHeader {
   display: flex;
   font-weight: 500;
-  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Adamina', serif;
+  /* font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; */
   color: white;
   background-color: #407EBB;
   justify-content: space-between;
@@ -51,7 +52,7 @@
 
 .WelcomeSignup {
   color: white;
-  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  /* font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; */
   font-weight: 500;
   font-size: 14px;
   margin-left: 20px;
@@ -67,7 +68,7 @@
 
 .WelcomeSignup:hover {
   background-color: white;
-  color: darkblue;
+  color: #407EBB;
   
   cursor: pointer;
   user-select: none;

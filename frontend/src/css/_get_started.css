@@ -37,6 +37,7 @@
 }
 
 .GSThreeDivs{
+  color: white;
   width: 200px;
   height: 147px;
   display: flex;
@@ -54,7 +55,7 @@
 
 .GSPillarLine {
   background-color: black;
-  width: 144px;
+  width: 155px;
   height: 1px;
   margin-top: -55px;
 }

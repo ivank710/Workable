@@ -30,11 +30,11 @@
   border-radius: 5px;
   width: 100px;
   text-align: center;
-  height: 40px;
+  height: 45px;
   font-family: 'Adamina', serif;;
 }
-/* 
-.searchbutton:hover {
+
+/* .searchbutton:hover {
   cursor: pointer;
   border: 2px solid #407EB4;
   border-radius: 3px;

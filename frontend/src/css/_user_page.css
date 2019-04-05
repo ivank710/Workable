@@ -32,20 +32,19 @@
 }
 
 .yourkeywords {
-  /* font-family: 'Passion One'; */
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-  color: black;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-family: 'Adamina', serif;
+  color: #4480B7;
+  font-size: 31px;
+  /* letter-spacing: 1px; */
   margin: 10px;
   min-width: 200px;
   width: 250px;
+  text-decoration: underline;
 }
 
 .keywords {
   color: black;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Adamina', serif;
   font-size: 24px;
   display: flex;
   flex-direction: column;
@@ -55,6 +54,7 @@
 
 .singleKeyword {
   min-width: 120px;
+  color: #4480B7;
 }
 
 .mainbar {
@@ -77,11 +77,9 @@
   justify-content: center;
   align-items: center;
   font-size: 52px;
-  letter-spacing: 4px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  /* font-family: 'Passion One'; */
-  color: rgb(34, 33, 32);
-  border-bottom: 1px solid rgb(34, 30, 23);
+  font-family: 'Adamina', serif;
+  color: #4480B7;
+  border-bottom: 1px solid #4480B7;
 }
 
 .jobitems {
@@ -121,11 +119,11 @@
   padding: 5px;
   margin: 10px;
   border: 1px solid orange;
-  height: 240px;
+  height: 210px;
 }
 
 .jobmaininfo {
-  height: 100px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -181,10 +179,9 @@
   background-color: #FFA500;
   border: none;
   color: white;
-      width: 175px;
-    padding: 5px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: center;
+  padding: 6px 50px;
+  font-family: 'Adamina', serif;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
 .job-url a:hover {
@@ -205,14 +202,14 @@
   width: 175px;
   padding: 5px;
   border-radius: 1px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Adamina', serif;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
 .delete-job button:hover {
   cursor: pointer;
-  /* text-shadow: 2px 0px 2px white; */
-  outline: 2px solid #407EB4;
-
+  /* text-shadow: 4px 0px 5px white; */
+  outline: 2px solid white;
 }
 
 
@@ -228,19 +225,19 @@
   font-weight: 800;
   height: 4em;
   width: 64em;
-  padding: 0.5em 1em;
+  padding: 15px;
   display: table-cell;
   vertical-align: middle;
-  letter-spacing: -2px;
+  /* letter-spacing: -2px; */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   min-width: 200px;
 }
 
 .card .subtle {
-  color: #000;
-  font-size: 0.5em;
-  font-weight: 400;
-  letter-spacing: -1px;
+  color: #4480B7;
+  font-size: 18px;
+  /* font-weight: 400; */
+  /* letter-spacing: -1px; */
 }
 
 .card i {
@@ -248,10 +245,11 @@
 }
 
 .bg-gold {
-  background: -webkit-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  /* background: -webkit-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
   background: -o-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
   background: -moz-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
-  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); */
+  border: 2px solid #4480B7; 
 }
 
 .bg-news {

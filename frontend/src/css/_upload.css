@@ -16,7 +16,7 @@
     border-radius: 3px;
 }
 
-.fileupload input:hover {
+.fileupload:hover, .uploadsubmit:hover {
   cursor: pointer;
   text-shadow: 4px 0px 5px white;
 }
@@ -29,6 +29,7 @@
     width: 200px;
     height: 100px;
     margin: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Adamina', serif;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 
 }
