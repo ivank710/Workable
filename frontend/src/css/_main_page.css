@@ -5,7 +5,7 @@
 
 
 .splash-container{
-  position: absolute;
+  /* position: absolute; */
   top: 0%;
   bottom: 24%;
   left: 0%;
@@ -36,11 +36,11 @@
 .splash-slogan{
   display: flex;
   justify-content: center;
-  padding-top: 577px;
+  /* padding-top: 577px; */
   font-size: 35px;
   font-weight: lighter;
   font-family: serif;
-  color: #4b57be;
+  color: #407EBB;
 }
 
 .splash-buttons{

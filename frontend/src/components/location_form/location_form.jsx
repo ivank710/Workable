@@ -10,10 +10,11 @@ class LocationForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        let keywords = this.props.keywords.keywords;
-        if (keywords.length === 0) {
+        let keywords = this.props.keywords;
+        if (keywords === undefined) {
             keywords = 'empty';
         } else {
+            keywords = this.props.keywords.keywords;
             // Take first few keywords to search
             keywords = keywords.slice(-1).join('+');
             console.log(keywords);
