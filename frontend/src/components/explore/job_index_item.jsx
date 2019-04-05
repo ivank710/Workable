@@ -32,12 +32,13 @@ class JobIndexItem extends React.Component {
 
         <div className="left-content">
           <div className="content-type-left">
-            <span className="content-label">Title:</span>{" "}
-            <span className="content-type">{this.props.job.title}</span>
+            {/* <span className="content-label">Title:</span> */}
+            {" "}
+            <span className="content-title">{this.props.job.title}</span><br></br>
           </div>
           <div className="content-type-left">
-            <span className="content-label">Company:</span>{" "}
-            <span className="content-type">{this.props.job.company}</span>
+            {/* <span className="content-label">Company:</span>{" "} */}
+            <span className="content-title">Company: {this.props.job.company}</span>
           </div>
           <div />
           <div className="content-type-left">
@@ -47,7 +48,7 @@ class JobIndexItem extends React.Component {
           <div className="content-type-left">
             <button className="save-button" onClick={this.handleSave}>Save To My List</button>
           </div>
-          <div className="company-image">{this.checkImage()}</div>
+          {/* <div className="company-image">{this.checkImage()}</div> */}
         </div>
       </div>
         <div className="right-content">

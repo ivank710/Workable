@@ -1,0 +1,67 @@
+
+
+.GetStarted {
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: white; */
+  background: -webkit-linear-gradient(70deg, #ff6464 50%, #5ac8fa 50%);
+  background: -o-linear-gradient(70deg, #ff6464 50%, #5ac8fa 50%);
+  background: -moz-linear-gradient(70deg, #ff6464 50%, #5ac8fa 50%);
+  background: linear-gradient(70deg, #ff6464 50%, #5ac8fa 50%);
+
+}
+
+.GetStartedDivs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 35px;
+  width: 1000px;
+}
+
+.GetStarted h1 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.GetStartedDivs img {
+  height: 70px;
+  width: 70px;
+}
+
+.GSThreeDivs{
+  width: 200px;
+  height: 147px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.GSThreeDivs h3 {
+  text-align: center;
+  font-weight: 600;
+  width:215px;
+}
+
+
+.GSPillarLine {
+  background-color: #bac5d4;
+  width: 144px;
+  height: 1px;
+  margin-top: -55px;
+}
+
+.lowerText {
+  color: #191a1b;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 12px;
+}
