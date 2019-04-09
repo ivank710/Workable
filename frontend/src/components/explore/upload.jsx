@@ -36,7 +36,7 @@ class Upload extends React.Component {
       })
       .then(res => {
         //KEYWORDS!!! 
-        console.log(res);
+        // console.log(res);
         this.setState({
           keywords: res.data
         })

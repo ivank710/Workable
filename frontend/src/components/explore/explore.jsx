@@ -30,9 +30,9 @@ class Explore extends React.Component {
   } else {
     let arr = this.props.keywords.keywords.filter(el => el !== '');
     // keywords = this.props.keywords.keywords.slice(1, this.props.keywords.keywords.length).map(el => {
-    keywords = arr.map(el => {
+    keywords = arr.map((el,i) => {
       return (
-        <span className='word'>&bull; {el}</span>
+        <span key={i} className='word'>&bull; {el}</span>
       )
     });
     
@@ -55,7 +55,7 @@ class Explore extends React.Component {
           </div>
           <div className="explorekeywords">
             {" "}
-            <div class="keyword-title">Keywords Used:</div> {keywords}
+            <div className="keyword-title">Keywords Used:</div> {keywords}
           </div>
           <div className="explorecontent">
             {this.props.jobs.map(job => (
