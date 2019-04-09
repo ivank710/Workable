@@ -123,7 +123,7 @@
 }
 
 .jobmaininfo {
-  height: 120px;
+  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -187,7 +187,7 @@
 .job-url a:hover {
   cursor: pointer;
   /* text-shadow: 4px 0px 5px white; */
-  outline: 2px solid #407EB4;
+  outline: 2px solid white;
 
 }
 
@@ -257,4 +257,9 @@
   background: -o-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
   background: -moz-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
   background: linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+}
+
+.jobmaininfo {
+  height: 50%;
+  margin-left: 5%;
 }

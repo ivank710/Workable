@@ -8,8 +8,8 @@ const receiveJobs = jobs => ({
 });
 
 export const getJobs = (location, keywords) => dispatch => {
-    console.log(location);
-    console.log(keywords);
+    // console.log(location);
+    // console.log(keywords);
     
     return APIUtil.getJobs(location, keywords)
     .then(jobs => dispatch(receiveJobs(jobs)))

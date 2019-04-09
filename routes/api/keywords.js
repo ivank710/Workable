@@ -93,7 +93,7 @@ router.post('/file-upload', upload.single('file'), (req, res, next) => {
       
         keyword.save();
 
-        console.log(result);
+        // console.log(result);
         res.send(result);
       });
 

@@ -9,7 +9,7 @@ class DescriptionItem extends React.Component{
   render(){
     return(
       <div id="modal-description-container">
-        <p id="modal-description">{ReactHtmlParser(this.props.description)}</p>
+        <div id="modal-description">{ReactHtmlParser(this.props.description)}</div>
       </div>
     )
   }

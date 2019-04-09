@@ -81,7 +81,7 @@ class JobIndexItem extends React.Component {
                 Click For Full Description
               </span>
 
-              <p>{ReactHtmlParser(this.props.job.description)}</p>
+              <div>{ReactHtmlParser(this.props.job.description)}</div>
             </button>
           </div>
         </div>
