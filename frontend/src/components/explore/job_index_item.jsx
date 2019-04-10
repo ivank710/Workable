@@ -38,7 +38,7 @@ class JobIndexItem extends React.Component {
           <div className="content-type-left">
             {/* <span className="content-label">Company:</span>{" "} */}
             <span className="content-title">
-              <strong>Company:</strong> {this.props.job.company}
+              <div className='companytitle'>Company:</div><div className='companyname'> {this.props.job.company}</div>
             </span>
           </div>
           <div />
