@@ -2,7 +2,7 @@
   display: flex;
   font-weight: 500;
   font-family: 'Adamina', serif;
-  /* font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; */
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: white;
   background-color: #407EBB;
   justify-content: space-between;
@@ -73,8 +73,6 @@
   cursor: pointer;
   user-select: none;
 }
-
-
 
 
 

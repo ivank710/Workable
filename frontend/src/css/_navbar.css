@@ -7,7 +7,8 @@
     display: flex;
     align-items: center;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     
 }
 
@@ -19,7 +20,7 @@
     align-items: center;
     padding: 7px 25px 0px 25px;
     border-bottom: 2px solid;
-    font-family: 'Adamina', serif;
+    /* font-family: 'Adamina', serif; */
 }
 
 
@@ -30,6 +31,7 @@
     align-items: center;
     height: 100%;
     width: 285px;
+    font-size: 18px;
 }
 
 .navlink:hover {
@@ -61,5 +63,5 @@
 }
 
 .title {
-  font-size: 28px;
+  font-size: 35px;
 }

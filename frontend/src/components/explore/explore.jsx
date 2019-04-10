@@ -44,7 +44,7 @@ class Explore extends React.Component {
         <div className="explore">
           <div className="header">
             <div className="searchtext">
-              &nbsp; &nbsp; See what's new around:
+              &nbsp; &nbsp; See who's hiring around:
             </div>
             <div>
               <LocationForm
