@@ -70,7 +70,7 @@
 
 
 .mainbartitle {
-  width: 95%;
+  width: 90%;
   height: 75px;
   background: transparent;
   display: flex;
@@ -113,13 +113,17 @@
 .job-container {
   background: #abbaab;  /* fallback for old browsers */
   background: linear-gradient(to right, #b8dee6, #427eba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(to bottom, #82b7ef, #80b8f3, #7ebaf7, #7bbbfb, #79bcff);
+  background-image: linear-gradient(to bottom, #95c9ff, #80b8f3, #7ebaf7, #7bbbfb, #a6c4e2);
   width: 350px;
   border: 7px solid #407EB4;
-  border-radius: 2.5px;
+  border-radius: 20px;
   padding: 5px;
   margin: 10px;
-  border: 1px solid orange;
-  height: 220px;
+  border:none;
+  height: 250px;
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
 }
 
 .jobmaininfo {
@@ -127,7 +131,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-bottom: 5%;
   font-size: 18px;
   height: fit-content;
@@ -141,6 +145,7 @@
 
 .company {
   padding-bottom: 2%;
+  /* height: 40px; */
 }
 
 .job-title {
@@ -152,19 +157,21 @@
 }
 
 .company-name{
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 .job-company {
-  /* font-weight: bold; */
+  font-weight: normal;
 }
 
 .role {
   font-weight: bold;
+   /* height: 40px; */
 }
 
 .location {
   font-weight: bold;
+   height: 40px;
 }
 
 .job-url {
@@ -178,16 +185,23 @@
 .apply-button {
   background-color: #FFA500;
   border: none;
+  border: 1px solid #FFA500;
+
   color: white;
   padding: 6px 50px;
-  font-family: 'Adamina', serif;
+  border-radius: 5px;
+
+  /* font-family: 'Adamina', serif; */
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
 }
 
 .job-url a:hover {
   cursor: pointer;
   /* text-shadow: 4px 0px 5px white; */
-  outline: 2px solid white;
+  border: 2px solid white;
+  border-radius: 5px;
 
 }
 
@@ -197,19 +211,22 @@
 .delete-button {
   text-align: center;
   background-color: #FFA500;
-  border: none;
+  border: 1px solid #FFA500;
   color: white;
   width: 175px;
   padding: 5px;
-  border-radius: 1px;
-  font-family: 'Adamina', serif;
+  border-radius: 5px;
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+  /* font-family: 'Adamina', serif; */
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 
 .delete-job button:hover {
   cursor: pointer;
   /* text-shadow: 4px 0px 5px white; */
-  outline: 2px solid white;
+    border: 2px solid white;
+  border-radius: 5px;
 }
 
 
