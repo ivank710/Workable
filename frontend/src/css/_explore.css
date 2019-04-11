@@ -80,7 +80,7 @@
   justify-content: space-around;
   background: #2193b0;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right,#91c8ff, #bff2fd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right,#91c8ff, #b0eaf7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 10px;
   font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   
@@ -287,4 +287,11 @@ background: linear-gradient(to right,#91c8ff, #bff2fd); /* W3C, IE 10+/ Edge, Fi
 .save-button:hover, #apply-now:hover {
   cursor: pointer;
   color: white;
+}
+
+.parsed  {
+
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap */
 }

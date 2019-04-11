@@ -114,6 +114,7 @@
   background: #abbaab;  /* fallback for old browsers */
   background: linear-gradient(to right, #b8dee6, #427eba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-image: linear-gradient(to bottom, #82b7ef, #80b8f3, #7ebaf7, #7bbbfb, #79bcff);
+  background-image: linear-gradient(to bottom, #95c9ff, #80b8f3, #7ebaf7, #7bbbfb, #a6c4e2);
   width: 350px;
   border: 7px solid #407EB4;
   border-radius: 20px;
