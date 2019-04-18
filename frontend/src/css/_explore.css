@@ -256,6 +256,7 @@ background: linear-gradient(to right,#91c8ff, #b0eaf7); /* W3C, IE 10+/ Edge, Fi
   border: 3px solid #427EBA;
   padding: 15px;
   margin: 10px;
+  font-family: Graphik, "Avenir Next", -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .word {
