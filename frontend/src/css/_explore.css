@@ -267,8 +267,8 @@ background: linear-gradient(to right,#91c8ff, #b0eaf7); /* W3C, IE 10+/ Edge, Fi
 
 .content-title {
   /* font-family: 'Adamina', serif;; */
-  font-size: 20px;
-  margin-top: 15px;
+  font-size: 21px;
+  margin-top: 13px;
   text-align: center;
   font-weight: bolder;
 }
@@ -294,4 +294,8 @@ background: linear-gradient(to right,#91c8ff, #b0eaf7); /* W3C, IE 10+/ Edge, Fi
   /* overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap */
+}
+
+#title{
+  font-size: 20px;
 }
